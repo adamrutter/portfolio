@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base",
+  "parserOptions": {
+   "ecmaVersion": 6
+  },
+  "plugins": ["compat"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "compat/compat": "warn",
+    "prefer-template": off
+  }
+}
