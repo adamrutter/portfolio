@@ -1,0 +1,14 @@
+#my-work {
+  background: $blue-500;
+  color: $grey-200;
+  z-index: 3;
+
+  // Diagonal ection divider
+  &::before {
+    background: $blue-500;
+  }
+
+  .circuit-board {
+    @import '../components/circuit-board/blue';
+  }
+}

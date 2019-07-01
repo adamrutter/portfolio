@@ -1,0 +1,15 @@
+#let-s-talk {
+  padding-top: line-height(default) * 3;
+  z-index: 4;
+
+  // Diagonal ection divider
+  &::before {
+    background: $grey-200;
+  }
+
+  .circuit-board {
+    @import '../components/circuit-board/white';
+
+    height: line-height(default) * 9;
+  }
+}

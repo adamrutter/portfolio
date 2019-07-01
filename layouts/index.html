@@ -4,61 +4,75 @@
 {{ $letstalk := (.Site.GetPage "/home/let-s-talk").Resources.Match "section*" }}
 
   <nav class="navbar">
+    <!-- <div class="content"></div> -->
   </nav>
 
-  <header>
+  <header id="hero">
+    <!-- <div class="content"></div> -->
   </header>
 
   <main>
 
     <section id="about-me">
-      <h2>About Me</h2>
-      <section id="{{ (index $aboutme 00).Title | urlize }}">
-        <h3>{{ (index $aboutme 00).Title }}</h3>
-        {{ (index $aboutme 00).Content }}
-      </section>
-      <section id="{{ (index $aboutme 01).Title | urlize }}">
-        <h3>{{ (index $aboutme 01).Title }}</h3>
-        {{ (index $aboutme 01).Content }}
-      </section>
-      <section id="{{ (index $aboutme 02).Title | urlize }}">
-        <h3>{{ (index $aboutme 02).Title }}</h3>
-        {{ (index $aboutme 02).Content }}
-      </section>
+      <div class="content">
+        <h2>About Me</h2>
+        <section id="{{ (index $aboutme 00).Title | urlize }}">
+          <h3>{{ (index $aboutme 00).Title }}</h3>
+          {{ (index $aboutme 00).Content }}
+        </section>
+        <section id="{{ (index $aboutme 01).Title | urlize }}">
+          <h3>{{ (index $aboutme 01).Title }}</h3>
+          {{ (index $aboutme 01).Content }}
+        </section>
+        <section id="{{ (index $aboutme 02).Title | urlize }}">
+          <h3>{{ (index $aboutme 02).Title }}</h3>
+          {{ (index $aboutme 02).Content }}
+        </section>
+      </div>
+      <div class="circuit-board"></div>
     </section>
 
     <section id="my-work">
-      <h2>My Work</h2>
-      {{ range $mywork }}
-        <section id="{{ .Title | urlize }}">
-          <h3>{{ .Title }}</h3>
-          <figure>
-            <img src="{{ .Params.desktopImage }}" alt="A preview of the {{ .Params.title }} website at desktop width">
-            <img src="{{ .Params.mobileImage }}" alt="A preview of the {{ .Params.title }} website at mobile width">
-          </figure>
-          <ul>
-            <li><a href="{{ .Params.siteLink }}">Visit the site</a></li>
-            <li><a href="{{ .Params.gitLink }}">View on GitHub</a></li>
-          </ul>
-          <figure>
-            <blockquote>
-              <p>{{ .Params.testimonial }}</p>
-            </blockquote>
-            <figcaption>{{ .Params.testimonialAuthor }}</figcaption>
-          </figure>
-          {{ .Content }}
-        </section>
-      {{ end }}
+      <div class="content">
+        <h2>My Work</h2>
+        {{ range $mywork }}
+          <section id="{{ .Title | urlize }}">
+            <h3>{{ .Title }}</h3>
+            <figure>
+              <img src="{{ .Params.desktopImage }}" alt="A preview of the {{ .Params.title }} website at desktop width">
+              <img src="{{ .Params.mobileImage }}" alt="A preview of the {{ .Params.title }} website at mobile width">
+            </figure>
+            <ul>
+              <li><a href="{{ .Params.siteLink }}">Visit the site</a></li>
+              <li><a href="{{ .Params.gitLink }}">View on GitHub</a></li>
+            </ul>
+            <figure>
+              <blockquote>
+                <p>{{ .Params.testimonial }}</p>
+              </blockquote>
+              <figcaption>{{ .Params.testimonialAuthor }}</figcaption>
+            </figure>
+            {{ .Content }}
+          </section>
+        {{ end }}
+      </div>
+      <div class="circuit-board"></div>
     </section>
 
     <section id="let-s-talk">
-      <h2>Let's Talk</h2>
-      {{ (index $letstalk 00).Content }}
+      <div class="content">
+        <h2>Let's Talk</h2>
+        {{ (index $letstalk 00).Content }}
+      </div>
+      <div class="circuit-board"></div>
     </section>
 
   </main>
 
   <footer>
+    <div class="content">
+      {{ partial "footer.html" . }}
+    </div>
   </footer>
 
 {{ end }}

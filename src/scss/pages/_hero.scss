@@ -1,0 +1,5 @@
+#hero {
+  background: $blue-500;
+  color: $grey-200;
+  height: calc(100vh + #{line-height(default) * 2});
+}

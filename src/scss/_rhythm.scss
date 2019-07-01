@@ -1,0 +1,227 @@
+//
+// Config
+//
+
+// Breakpoints (make sure to add entries for each breakpoint in the other config maps)
+// (Uses min-width; rememeber, mobile first!)
+$breakpoints: (
+  'default': 0,
+);
+
+// The base font size (used for body text, and to calculate other sizing)
+$base-size: (
+  'default': 18px,
+);
+
+// The base line height (1.5 times the base font size usually works)
+$base-line-height: (
+  'default': 1.5,
+);
+
+// The ratio by which we will scale sizing by
+$scale-ratio: (
+  'default': 1.2,
+);
+
+// Indent amount (used to indent things such as lists, figures etc) (Multiplied by $base-size)
+$indent-multiplier: (
+  'default': 3,
+);
+
+// Align to either full multiples of $base-line-height, or half multiples (whole will fit elements
+// to the grid exactly, half will also align to half lines). Whole is preferable, but can sometimes
+// introduce bad looking small font-size/high line-height combos. You could also fix this by
+// adjusting line height and margin (using rhythm variables) on problem elements in your own
+// stylesheet, if using rhythm in your Sass workflow
+// String; 'exact' or 'half'
+$align-to-grid: (
+  'default': 'exact',
+);
+
+// Enable the grid?
+// Boolean; true or false
+$show-grid: false;
+
+//
+// Grid
+//
+
+// Uses mixin so the styles can be applied at different breakpoints
+@mixin grid($line-height, $align-to-grid) {
+  @if $show-grid {
+    body {
+      $grid-colour-1: hsla(240, 30, 50, 0.2);
+      $grid-colour-2: hsla(240, 30, 50, 0.075);
+
+      @if $align-to-grid == 'exact' {
+        background-image: linear-gradient(to bottom, $grid-colour-1 1px, transparent 1px);
+      } @else if $align-to-grid == 'half' {
+        background-image: linear-gradient(to bottom, $grid-colour-1 1px, transparent 1px, transparent ($line-height / 2), $grid-colour-2 ($line-height / 2), transparent (round($line-height / 2) + 2), transparent $line-height);
+      }
+
+      background-position: left top;
+      background-repeat: repeat;
+      background-size: 100% $line-height;
+    }
+  }
+}
+
+//
+// Functions
+//
+
+// A function to return the line-height of a given breakpoint
+@function line-height($breakpoint) {
+  @return (map-get($base-line-height, $breakpoint) * map-get($base-size, $breakpoint));
+}
+
+// A function to return the base-size of a given breakpoint
+@function base-size($breakpoint) {
+  @return (map-get($base-size, $breakpoint));
+}
+
+// A 'power of' function (multiply a number by itself n amount of times)
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+//
+// Styling
+//
+
+// Uses mixin so the styles can be applied at different breakpoints
+@mixin styling($base-size, $base-line-height, $scale-ratio, $indent-multiplier, $align-to-grid) {
+
+  // Variables
+  $line-height: round($base-size * $base-line-height);
+  $indent-amount: round($base-size * $indent-multiplier);
+
+  // Include the layout grid
+  @include grid($line-height, $align-to-grid);
+
+  // Set basic styles globally
+  * {
+    font-size: $base-size;
+    line-height: $line-height;
+  }
+
+  // Set a margin on the bottom of the page
+  // body {
+  //   margin-bottom: $line-height * 3;
+  // }
+
+  // Default global style rules for block level text elements
+  blockquote, dd, dl, dt, figcaption, figure, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
+    margin: $line-height 0;
+  }
+
+  // Headings (this styles headings 1 through 6)
+  @for $i from 1 through 6 {
+    h#{$i} {
+
+      // Calculate the correct font size (as a variable first, so it can be reused later)
+      $size: round($base-size * pow($scale-ratio, abs($i - 7)));
+      font-size: $size;
+
+      // Calculate line height
+      @if $align-to-grid == 'exact' {
+        $heading-line-height: round(ceil($size / $line-height) * $line-height);
+        line-height: $heading-line-height;
+      } @else if $align-to-grid == 'half' {
+        $heading-line-height: round(ceil($size / ($line-height / 2)) * ($line-height / 2));
+        line-height: $heading-line-height;
+      }
+
+      // Headings should have more white space above them than below, remember the Gestalt principle
+      // of proximity
+      margin: $line-height * 3 0 $line-height * 1 0;
+
+      // Useful if you use code tags within a heading
+      code {
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+
+  // Lists (Make sure they are all aligned horizontally) (We set the indent in two parts; this means
+  // we can control the distance the li is from the bullet; if you change it, make sure the two parts
+  // add up to the whole value of $indent-multiplier to keep horizontal alignment)
+  dl, ol, ul {
+    padding: 0 $indent-amount * ((1 / 6) * 5);
+  }
+
+  dd, dt, li {
+    margin: 0;
+
+    // Distance from bullet
+    padding: 0 $indent-amount * ((1 / 6) * 1);
+  }
+
+  dt {
+    font-weight: 700;
+
+    // Titles should have white space above them
+    margin-top: $line-height;
+  }
+
+  // Figure
+  figure {
+    margin: $line-height * 2 0;
+    padding: 0 $indent-amount;
+  }
+
+  // Blockquotes
+  blockquote {
+    font-style: italic;
+  }
+
+  // Tables; box-shadow has to be used instead of border (border adds to the height/width of the
+  // element and breaks vertical rhythm)
+  table {
+    border-collapse: collapse;
+
+    tr {
+      th, td {
+        box-shadow: 0 1px 0 black;
+        padding: 0 $indent-amount 0 0;
+        text-align: left;
+      }
+    }
+  }
+
+  // Code
+  code {
+    font-size: round($base-size * 0.85);
+    vertical-align: bottom;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    padding: $line-height;
+  }
+}
+
+//
+// Media queries
+//
+
+// Iterate through the $breakpoints map, and produce a media query for each entry, including default
+// styling
+@each $breakpoint, $width in $breakpoints {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @include styling($base-size: map-get($base-size, $breakpoint),
+    $base-line-height: map-get($base-line-height, $breakpoint),
+    $scale-ratio: map-get($scale-ratio, $breakpoint),
+    $indent-multiplier: map-get($indent-multiplier, $breakpoint),
+    $align-to-grid: map-get($align-to-grid, $breakpoint));
+  }
+}
