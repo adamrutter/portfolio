@@ -3,9 +3,60 @@
   color: $grey-200;
   z-index: 3;
 
-  // Diagonal ection divider
+  // Diagonal section divider
   &::before {
     background: $blue-500;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: -#{line-height(default)};
+    padding: line-height(default);
+
+    li {
+      padding-left: line-height(default) * 1.25;
+      position: relative;
+      margin: 0 line-height(default) * 0.5;
+      white-space: nowrap;
+
+      &::before {
+        // background: red;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        height: 90%;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: line-height(default) * 0.9;
+      }
+
+      &.web::before {
+        @import '../components/project-link-icons/web';
+      }
+
+      &.github::before {
+        @import '../components/project-link-icons/github';
+      }
+
+      a {
+        color: $grey-200;
+
+        &::after {
+          background: $blue-400;
+          opacity: 0.9;
+        }
+
+        &:hover {
+          color: $grey-100;
+        }
+      }
+    }
   }
 
   .circuit-board {

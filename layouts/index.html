@@ -80,18 +80,18 @@
             <figure class="images">
               <div class="desktop">
                 <div class="image">
-                  <img src="{{ .Params.desktopImage }}" alt="A preview of the {{ .Params.title }} website at desktop width">                  
+                  <img src="{{ .Params.desktopImage }}" alt="A preview of the {{ .Params.title }} website at desktop width">
                 </div>
               </div>
               <div class="mobile">
                 <div class="image">
-                  <img src="{{ .Params.mobileImage }}" alt="A preview of the {{ .Params.title }} website at mobile width">                                  
+                  <img src="{{ .Params.mobileImage }}" alt="A preview of the {{ .Params.title }} website at mobile width">
                 </div>
               </div>
             </figure>
-            <ul>
-              <li><a href="{{ .Params.siteLink }}">Visit the site</a></li>
-              <li><a href="{{ .Params.gitLink }}">View on GitHub</a></li>
+            <ul class=links>
+              <li class="web"><a href="{{ .Params.siteLink }}">Visit the site</a></li>
+              <li class="github"><a href="{{ .Params.gitLink }}">View on GitHub</a></li>
             </ul>
             <figure>
               <blockquote>
