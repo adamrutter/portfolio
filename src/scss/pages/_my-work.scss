@@ -8,6 +8,24 @@
     background: $blue-500;
   }
 
+  .testimonial {
+    padding: 0 (line-height(default) * 0.5);
+
+    @media only screen and (min-width: 500px) {
+      padding: 0 (line-height(default) * 1);
+    }
+
+    blockquote {
+      text-align: center;
+      font-style: italic;
+    }
+
+    figcaption {
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
   .links {
     display: flex;
     flex-wrap: wrap;
