@@ -1,7 +1,9 @@
 body > footer {
   background: $blue-500;
   color: $grey-200;
+  position: relative;
 
   padding: (line-height(default) * 6) 0;
   text-align: center;
+  z-index: 5;
 }

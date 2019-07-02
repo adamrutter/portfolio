@@ -1,0 +1,16 @@
+#about-me,
+#my-work,
+#let-s-talk,
+footer {
+  &::before {
+    background: $blue-500;
+    content: '';
+    height: 25vw;
+    left: 0;
+    position: absolute;
+    top: -#{line-height(default) * 2};
+    transform: skewY(-3deg);
+    width: 100%;
+    z-index: -1;
+  }
+}
