@@ -23,6 +23,16 @@
         <section id="{{ (index $aboutme 01).Title | urlize }}">
           <h3>{{ (index $aboutme 01).Title }}</h3>
           {{ (index $aboutme 01).Content }}
+          <ul class="columns">
+            <li>
+              <svg><use xlink:href="/svg/sprite.svg#design"></use></svg>
+              Mobile-first, responsive web design
+            </li>
+            <li>
+              <svg><use xlink:href="/svg/sprite.svg#development"></use></svg>
+              Modern, efficient web development
+            </li>
+          </ul>
         </section>
         <section id="{{ (index $aboutme 02).Title | urlize }}">
           <h3>{{ (index $aboutme 02).Title }}</h3>
