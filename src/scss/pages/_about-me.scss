@@ -17,7 +17,6 @@
   ul.columns {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     list-style: none;
     margin: (line-height(default) * 2) 0 (line-height(default) * 3) 0;
     padding: 0;
@@ -27,11 +26,22 @@
     }
 
     li {
+      padding: 0;
+    }
+
+    svg {
+      fill: $blue-400;
+    }
+  }
+
+  #what-i-do ul.columns {
+    justify-content: space-around;
+
+    li {
       font-size: round(map-get($base-size, default) * 0.9);
       height: line-height(default) * 10;
       line-height: round(line-height(default) * 0.8);
       margin: 0 (line-height(default) * 0.25);
-      padding: 0;
       text-align: center;
       width: 100px;
 
@@ -41,12 +51,33 @@
     }
 
     svg {
-      fill: $blue-400;
       width: 100%;
 
       @media only screen and (min-width: 500px) {
         margin-bottom: line-height(default);
       }
+    }
+  }
+
+  #how-i-do-it ul.columns {
+    justify-content: space-around;
+
+    @media only screen and (min-width: 500px) {
+    }
+
+    li {
+      height: line-height(default) * 2;
+      margin: line-height(default) * 0.5;
+      width: line-height(default) * 2;
+
+      @media only screen and (min-width: 500px) {
+        margin: line-height(default);
+      }
+    }
+
+    svg {
+      height: 100%;
+      width: 100%;
     }
   }
 }

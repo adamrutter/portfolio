@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg102"
+   version="1.1"
+   viewBox="0 0 19.71974 19.71974"
+   height="19.71974mm"
+   width="19.71974mm">
+  <defs
+     id="defs96" />
+  <metadata
+     id="metadata99">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-63.465364,-47.505857)"
+     id="layer1">
+    <path
+       style="stroke-width:0.06573246"
+       d="m 70.038609,67.225597 c 1.814216,0 3.286624,-1.472406 3.286624,-3.286622 v -3.286623 h -3.286624 c -1.814215,0 -3.286622,1.472407 -3.286622,3.286623 0,1.814216 1.472407,3.286622 3.286622,3.286622 z"
+       class="st0"
+       id="path0_fill" />
+    <path
+       style="stroke-width:0.06573246"
+       d="m 66.751987,57.365728 c 0,-1.814216 1.472407,-3.286623 3.286622,-3.286623 h 3.286624 v 6.573247 h -3.286624 c -1.814215,0 -3.286622,-1.472409 -3.286622,-3.286624 z"
+       class="st1"
+       id="path1_fill" />
+    <path
+       style="stroke-width:0.06573246"
+       d="m 66.751987,50.792482 c 0,-1.814215 1.472407,-3.286623 3.286622,-3.286623 h 3.286624 v 6.573246 h -3.286624 c -1.814215,0 -3.286622,-1.472407 -3.286622,-3.286623 z"
+       class="st2"
+       id="path1_fill_1_" />
+    <path
+       style="stroke-width:0.06573246"
+       d="m 73.325233,47.505859 h 3.286621 c 1.814219,0 3.286627,1.472408 3.286627,3.286623 0,1.814216 -1.472408,3.286623 -3.286627,3.286623 h -3.286621 z"
+       class="st3"
+       id="path2_fill" />
+    <path
+       style="stroke-width:0.06573246"
+       d="m 79.898481,57.365728 c 0,1.814215 -1.472408,3.286624 -3.286627,3.286624 -1.814214,0 -3.286621,-1.472409 -3.286621,-3.286624 0,-1.814216 1.472407,-3.286623 3.286621,-3.286623 1.814219,0 3.286627,1.472407 3.286627,3.286623 z"
+       class="st4"
+       id="path3_fill" />
+  </g>
+</svg>
