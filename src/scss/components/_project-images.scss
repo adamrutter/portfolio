@@ -3,6 +3,7 @@
   margin: (line-height(default) * 2) auto (line-height(default) * 3) auto;
   padding: 0;
   position: relative;
+  width: 100%;
   width: calc(100% - #{line-height(default) * 1});
 
   @media only screen and (min-width: 400px) {
