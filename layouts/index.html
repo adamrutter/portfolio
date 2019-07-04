@@ -76,30 +76,35 @@
         <h2>My Work</h2>
         {{ range $mywork }}
           <section class="project" id="{{ .Title | urlize }}">
-            <h3>{{ .Title }}</h3>
-            <figure class="images">
-              <div class="desktop">
-                <div class="image">
-                  <img src="{{ .Params.desktopImage }}" alt="A preview of the {{ .Params.title }} website at desktop width">
+            <div class="overview">
+              <h3>{{ .Title }}</h3>
+              <figure class="images">
+                <div class="desktop">
+                  <div class="image">
+                    <img src="{{ .Params.desktopImage }}" alt="A preview of the {{ .Params.title }} website at desktop width">
+                  </div>
                 </div>
-              </div>
-              <div class="mobile">
-                <div class="image">
-                  <img src="{{ .Params.mobileImage }}" alt="A preview of the {{ .Params.title }} website at mobile width">
+                <div class="mobile">
+                  <div class="image">
+                    <img src="{{ .Params.mobileImage }}" alt="A preview of the {{ .Params.title }} website at mobile width">
+                  </div>
                 </div>
-              </div>
-            </figure>
-            <ul class=links>
-              <li class="web"><a href="{{ .Params.siteLink }}">Visit the site</a></li>
-              <li class="github"><a href="{{ .Params.gitLink }}">View on GitHub</a></li>
-            </ul>
-            <figure class="testimonial">
-              <blockquote>
-                <p>{{ .Params.testimonial }}</p>
-              </blockquote>
-              <figcaption>{{ .Params.testimonialAuthor }}</figcaption>
-            </figure>
-            {{ .Content }}
+              </figure>
+              <ul class=links>
+                <li class="web"><a href="{{ .Params.siteLink }}">Visit the site</a></li>
+                <li class="github"><a href="{{ .Params.gitLink }}">View on GitHub</a></li>
+              </ul>
+              <figure class="testimonial">
+                <blockquote>
+                  <p>{{ .Params.testimonial }}</p>
+                </blockquote>
+                <figcaption>{{ .Params.testimonialAuthor }}</figcaption>
+              </figure>
+            </div>
+            <div class="description hidden">
+              {{ .Content }}
+            </div>
+            {{ partial "hr-slide.html" }}
           </section>
         {{ end }}
       </div>
@@ -121,5 +126,7 @@
       {{ partial "footer.html" . }}
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
 
 {{ end }}

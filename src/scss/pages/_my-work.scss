@@ -41,7 +41,6 @@
       white-space: nowrap;
 
       &::before {
-        // background: red;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -75,6 +74,20 @@
         }
       }
     }
+  }
+
+  .description {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease-in-out;
+
+    p:last-child {
+      margin-bottom: line-height(default) * 2;
+    }
+  }
+
+  .hr {
+    margin: (line-height(default) * 1) 0 (line-height(default) * 6) 0;
   }
 
   .circuit-board {
