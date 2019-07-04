@@ -1,3 +1,4 @@
+@import '../components/circuit-board';
 #let-s-talk {
   padding-top: line-height(default) * 3;
   z-index: 4;
@@ -8,6 +9,6 @@
   }
 
   .circuit-board {
-    @import '../components/circuit-board/white';
+    @include circuit-board($grey-400, 0.5);
   }
 }

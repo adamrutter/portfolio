@@ -1,3 +1,5 @@
+@import '../components/circuit-board';
+
 #about-me {
   z-index: 2;
 
@@ -8,10 +10,6 @@
 
   h3 {
     color: $blue-700;
-  }
-
-  .circuit-board {
-    @import '../components/circuit-board/white';
   }
 
   ul.columns {
@@ -79,5 +77,10 @@
       height: 100%;
       width: 100%;
     }
+  }
+
+  .circuit-board {
+    @include circuit-board($grey-400, 0.5);
+
   }
 }

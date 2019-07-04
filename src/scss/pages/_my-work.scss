@@ -1,3 +1,4 @@
+@import '../components/circuit-board';
 @import '../components/bullet-icons/web';
 @import '../components/bullet-icons/github';
 
@@ -94,6 +95,6 @@
   }
 
   .circuit-board {
-    @import '../components/circuit-board/blue';
+    @include circuit-board($blue-200, 0.3);
   }
 }

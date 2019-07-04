@@ -32,8 +32,6 @@
   }
 
   .circuit-board {
-    @import 'circuit-board/white';
-
     height: line-height(default) * 10;
     margin-top: line-height(default) * 7;
     width: 100vw;
