@@ -20,7 +20,7 @@ a {
     height: 0;
     left: 0;
     position: absolute;
-    transition: 0.1s;
+    transition: 0.1s ease-in-out;
     width: 100%;
     z-index: -1;
   }
