@@ -83,5 +83,6 @@
   .circuit-board {
     @include circuit-board($grey-400, 0.5);
 
+    margin-top: line-height(default) * 7;
   }
 }
