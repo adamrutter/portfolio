@@ -1,3 +1,6 @@
+@import '../components/bullet-icons/web';
+@import '../components/bullet-icons/github';
+
 #my-work {
   background: $blue-500;
   color: $grey-200;
@@ -54,11 +57,11 @@
       }
 
       &.web::before {
-        @import '../components/project-link-icons/web';
+        @include web-icon($blue-200);
       }
 
       &.github::before {
-        @import '../components/project-link-icons/github';
+        @include github-icon($blue-200);
       }
 
       a {
