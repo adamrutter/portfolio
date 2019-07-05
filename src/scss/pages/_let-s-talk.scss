@@ -1,4 +1,8 @@
 @import '../components/circuit-board';
+@import '../components/bullet-icons/name';
+@import '../components/bullet-icons/email';
+@import '../components/bullet-icons/message';
+
 #let-s-talk {
   padding-top: line-height(default) * 3;
   z-index: 4;
@@ -6,6 +10,110 @@
   // Diagonal section divider
   &::before {
     background: $grey-200;
+  }
+
+  .content > p:first-of-type {
+    margin-top: line-height(default) * 2;
+  }
+
+  form {
+    margin: (line-height(default) * 3) 0;
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      margin: #{line-height(default) * 0.5} 0;
+      padding-left: line-height(default) * 1.75;
+    }
+
+    textarea {
+      height: line-height(default) * 10;
+    }
+
+    input[type="submit"] {
+      margin: #{line-height(default) * 1} 0;
+    }
+
+    label {
+      left: line-height(default) * 1.75;
+    }
+
+    // Input/textarea icons
+    .name.container,
+    .email.container,
+    .message.container {
+      &::before {
+        // background: red;
+        content: '';
+        height: 25px;
+        left: line-height(default) * 0.5;
+        position: absolute;
+        top: #{line-height(default) + 2};
+        // transition: background-image 2s ease-in-out;
+        width: 25px;
+      }
+    }
+
+    .name.container {
+      &::before {
+        @include name-icon($grey-500);
+      }
+      &:focus-within {
+        &::before {
+          @include name-icon($blue-500);
+        }
+      }
+    }
+
+    .email.container {
+      &::before {
+        @include email-icon($grey-500);
+      }
+      &:focus-within {
+        &::before {
+          @include email-icon($blue-500);
+        }
+      }
+    }
+
+    .message.container {
+      &::before {
+        @include message-icon($grey-500);
+      }
+      &:focus-within {
+        &::before {
+          @include message-icon($blue-500);
+        }
+      }
+    }
+
+    // Alignment/wrapping
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+
+      .name,
+      .email {
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 600px) {
+        flex-wrap: nowrap;
+
+        .name {
+          margin-right: line-height(default) * 0.5;
+        }
+
+        .email {
+          margin-left: line-height(default) * 0.5;
+        }
+      }
+    }
+
+    .submit {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .circuit-board {
