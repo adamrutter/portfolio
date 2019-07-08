@@ -1,0 +1,150 @@
+.navbar {
+  @include shadow-900($grey-800);
+
+  background: $blue-600;
+  border-bottom: 2px solid $blue-300;
+  height: line-height(default) * 3;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  .content {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  // Main navigation
+  ul {
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+
+    @media only screen and (min-width: 475px) {
+      width: auto;
+    }
+
+    li {
+      height: 100%;
+      margin: 0 (line-height(default) * 0.25);
+      padding: 0;
+      position: relative;
+      transition: transform 0.2s ease-in-out;
+      white-space: nowrap;
+      width: 100%;
+
+      // Margins for various screen sizes
+      @media only screen and (min-width: 325px) {
+        margin: 0 (line-height(default) * 0.5);
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @media only screen and (min-width: 475px) {
+        margin: 0 (line-height(default) * 0.75);
+      }
+
+      // Links
+      a {
+        align-items: center;
+        color: $blue-200;
+        display: inline-flex;
+        font-weight: 400;
+        height: 100%;
+        opacity: 0.95;
+        outline: none;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+      }
+
+      // Active/hover indicator
+      .highlight {
+        border-left: 2px solid $blue-300;
+        border-top: 2px solid $blue-300;
+        height: 100%;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        top: calc(100% + 4px);
+        transform: translateX(-50%);
+        transition: transform 0.2s ease-in-out;
+        width: 100%;
+        width: calc(100% + 20px);
+
+        &::after {
+          background: $blue-600;
+          border: 2px solid $blue-300;
+          content: '';
+          border-radius: 50%;
+          height: 5px;
+          position: absolute;
+          right: 4px;
+          top: -1px;
+          transform: translateX(50%) translateY(-50%);
+          width: 5px;
+        }
+      }
+
+      &.active {
+        a {
+          color: $grey-200;
+          opacity: 1;
+        }
+      }
+
+      // Hover styles; only if the device supports it. This stops touch devices using hover styles
+      // on focus
+      @media (hover: hover) {
+        &:hover {
+          color: $grey-200;
+          opacity: 1;
+        }
+      }
+
+      // Align the highlight on active li
+      &.active .highlight {
+        transform: translateX(-50%) translateY(-15px);
+      }
+
+      // Align the highlight on hovered li, but only if the device supports hover; this stops touch
+      // devices using hover styles on focus
+      @media (hover: hover) {
+        &:hover {
+          transform: translateY(-8px);
+
+          .highlight {
+            transform: translateX(-50%) translateY(-23px);
+          }
+        }
+      }
+    }
+  }
+
+  // Logo
+  .logo {
+    color: $grey-200;
+    display: none;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 36px;
+
+    @media only screen and (min-width: 475px) {
+      display: inline-block;
+    }
+  }
+}

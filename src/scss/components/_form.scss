@@ -49,12 +49,14 @@ form {
     transition: background 0.1s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
     width: 75%;
 
-    &:hover {
-      @include shadow-500-highlight($grey-800, $blue-200);
+    @media (hover: hover) {
+      &:hover {
+        @include shadow-500-highlight($grey-800, $blue-200);
 
-      background: lighten($blue-500, 1%);
-      cursor: pointer;
-      transform: translateY(-1px);
+        background: lighten($blue-500, 1%);
+        cursor: pointer;
+        transform: translateY(-1px);
+      }
     }
 
     &:active {

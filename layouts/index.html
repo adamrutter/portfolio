@@ -4,7 +4,25 @@
 {{ $letstalk := (.Site.GetPage "/home/let-s-talk").Resources.Match "section*" }}
 
   <nav class="navbar">
-    <!-- <div class="content"></div> -->
+    <div class="content">
+      <div class="logo">
+        AR
+      </div>
+      <ul>
+        <li class="about-me">
+            <a href="#about-me">About Me</a>
+            <div class="highlight"></div>
+        </li>
+        <li class="my-work">
+            <a href="#my-work">My Work</a>
+            <div class="highlight"></div>
+        </li>
+        <li class="let-s-talk">
+            <a href="#let-s-talk">Let's Talk</a>
+            <div class="highlight"></div>
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <header id="hero">
