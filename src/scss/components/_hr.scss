@@ -67,12 +67,14 @@
     transition: 0.1s ease-in-out;
     width: 30px;
 
-    &:hover {
-      cursor: pointer;
-      transform: translateX(-50%) translateY(-1px);
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+        transform: translateX(-50%) translateY(-1px);
 
-      svg {
-        fill: lighten($color, 7.5%);
+        svg {
+          fill: lighten($color, 7.5%);
+        }
       }
     }
 
