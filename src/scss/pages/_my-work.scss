@@ -86,12 +86,12 @@
     transition: height 0.35s ease-in-out;
 
     p:last-child {
-      margin-bottom: line-height(default) * 2;
+      margin-bottom: line-height(default) * 3;
     }
   }
 
   .hr {
-    margin: (line-height(default) * 1) 0 (line-height(default) * 6) 0;
+    margin: (line-height(default) * 1) 0 (line-height(default) * 7) 0;
   }
 
   .circuit-board {
