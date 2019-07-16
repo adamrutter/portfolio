@@ -9,7 +9,7 @@ footer {
     left: 0;
     position: absolute;
     top: -#{line-height(default) * 2};
-    transform: skewY(-3deg);
+    transform: skewY(-#{$skew});
     width: 100%;
     z-index: -1;
   }

@@ -1,4 +1,6 @@
-function updateNavbarClass() {
+function updateNavbar() {
+  const navbar = document.querySelector('.navbar');
+  const hero = document.getElementById('hero');
   const sections = document.querySelectorAll('main > section');
   const links = {
     'about-me': document.querySelector('.navbar li.about-me'),
@@ -6,12 +8,14 @@ function updateNavbarClass() {
     'let-s-talk': document.querySelector('.navbar li.let-s-talk'),
   };
 
-  // Values we need so we can move the threshold from the top of the viewport
-  const navbarHeight = document.querySelector('.navbar').offsetHeight;
-  const circuitBoardHeight = document.querySelector('.circuit-board').offsetHeight;
-  const sectionOverflow = 29;
+  // Change navbar item classes based on scroll position
+  function updateClass() {
 
-  document.addEventListener('scroll', () => {
+    // Values we need so we can move the threshold from the top of the viewport
+    const navbarHeight = navbar.offsetHeight;
+    const circuitBoardHeight = document.querySelector('.circuit-board').offsetHeight;
+    const sectionOverflow = 29;
+
     sections.forEach((section) => {
 
       // The relevant navbar link
@@ -31,9 +35,27 @@ function updateNavbarClass() {
         link.classList.remove('active');
       }
     });
+  }
+
+  // Change the background colour based on scroll position
+  function updateBackground() {
+    if (hero.getBoundingClientRect().top < 0) {
+      navbar.classList.add('background');
+    } else {
+      navbar.classList.remove('background');
+    }
+  }
+
+  // Run the functions
+  updateClass();
+  updateBackground();
+  document.addEventListener('scroll', () => {
+    updateClass();
+    updateBackground();
   });
 }
 
+// Function on run on page load
 document.addEventListener('DOMContentLoaded', () => {
-  updateNavbarClass();
+  updateNavbar();
 });

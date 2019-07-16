@@ -1,13 +1,10 @@
 .navbar {
-  @include shadow-900($grey-800);
-
-  background: $blue-600;
-  border-bottom: 2px solid $blue-300;
   height: line-height(default) * 3;
   overflow: hidden;
   padding: 0;
   position: fixed;
   top: 0;
+  transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out;
   width: 100%;
   z-index: 100;
 
@@ -62,7 +59,7 @@
       // Links
       a {
         align-items: center;
-        color: $blue-200;
+        color: $grey-200;
         display: inline-flex;
         font-weight: 400;
         height: 100%;
@@ -88,7 +85,7 @@
         width: calc(100% + 20px);
 
         &::after {
-          background: $blue-600;
+          background: $blue-500;
           border: 2px solid $blue-300;
           content: '';
           border-radius: 50%;
@@ -97,6 +94,7 @@
           right: 4px;
           top: -1px;
           transform: translateX(50%) translateY(-50%);
+          transition: background 0.2s ease-in-out;
           width: 5px;
         }
       }
@@ -133,6 +131,22 @@
           }
         }
       }
+    }
+  }
+
+  // Styles for navbar once scrolled
+  &.background {
+    @include shadow-900($grey-800);
+
+    background: $blue-600;
+    border-bottom: 2px solid $blue-300;
+
+    a {
+      color: $blue-200;
+    }
+
+    .highlight::after {
+      background: $blue-600;
     }
   }
 
