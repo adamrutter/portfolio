@@ -1,0 +1,59 @@
+{{ $aboutme := (.Site.GetPage "/home/about-me").Resources.Match "section*" }}
+
+<section id="about-me">
+  <div class="content">
+    <h2>About Me</h2>
+    <section id="{{ (index $aboutme 00).Title | urlize }}">
+      <h3>{{ (index $aboutme 00).Title }}</h3>
+      {{ (index $aboutme 00).Content }}
+    </section>
+    <section id="{{ (index $aboutme 01).Title | urlize }}">
+      <h3>{{ (index $aboutme 01).Title }}</h3>
+      {{ (index $aboutme 01).Content }}
+      <ul class="columns">
+        <li>
+          <svg><use xlink:href="/svg/sprite.svg#design"></use></svg>
+          Mobile-first, responsive web design
+        </li>
+        <li>
+          <svg><use xlink:href="/svg/sprite.svg#development"></use></svg>
+          Modern, efficient web development
+        </li>
+      </ul>
+    </section>
+    <section id="{{ (index $aboutme 02).Title | urlize }}">
+      <h3>{{ (index $aboutme 02).Title }}</h3>
+      {{ (index $aboutme 02).Content }}
+      <ul class="columns">
+      <li>
+        <svg><use xlink:href="/svg/sprite.svg#html"></use></svg>
+      </li>
+      <li>
+        <svg><use xlink:href="/svg/sprite.svg#css"></use></svg>
+      </li>
+      <li>
+        <svg><use xlink:href="/svg/sprite.svg#javascript"></use></svg>
+      </li>
+      <li>
+        <svg><use xlink:href="/svg/sprite.svg#github"></use></svg>
+      </li>
+      <li>
+        <svg><use xlink:href="/svg/sprite.svg#netlify"></use></svg>
+      </li>
+      <li>
+        <svg><use xlink:href="/svg/sprite.svg#hugo"></use></svg>
+      </li>
+      <li>
+        <svg><use xlink:href="/svg/sprite.svg#sass"></use></svg>
+      </li>
+      <li>
+        <svg><use xlink:href="/svg/sprite.svg#gimp"></use></svg>
+      </li>
+      <li>
+        <svg><use xlink:href="/svg/sprite.svg#figma"></use></svg>
+      </li>
+    </ul>
+    </section>
+  </div>
+  <div class="circuit-board"></div>
+</section>

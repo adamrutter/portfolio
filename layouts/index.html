@@ -1,182 +1,19 @@
 {{ define "body" }}
-{{ $aboutme := (.Site.GetPage "/home/about-me").Resources.Match "section*" }}
-{{ $mywork := (.Site.GetPage "/home/my-work").Resources.Match "section*" }}
-{{ $letstalk := (.Site.GetPage "/home/let-s-talk").Resources.Match "section*" }}
 
-  <nav class="navbar">
-    <div class="content">
-      <div class="logo">
-        A<span class="blue">R</span>
-      </div>
-      <ul>
-        <li class="about-me">
-            <a href="#about-me">About Me</a>
-            <div class="highlight"></div>
-        </li>
-        <li class="my-work">
-            <a href="#my-work">My Work</a>
-            <div class="highlight"></div>
-        </li>
-        <li class="let-s-talk">
-            <a href="#let-s-talk">Let's Talk</a>
-            <div class="highlight"></div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  {{ partial "navbar.html" . }}
 
   <header id="hero">
-    <div class="text">
-      <div class="container">
-        <h1>
-          <span class="first name">Adam </span><span class="last name">Rutter</span>
-        </h1>
-        <p class="sub">Front-end Web Developer/Designer</p>
-      </div>
-    </div>
-    <div class="image">
-      <div class="spacer"></div>
-      <div class="svg"></div>
-    </div>
+    {{ partial "hero.html" . }}
   </header>
 
   <main>
-
-    <section id="about-me">
-      <div class="content">
-        <h2>About Me</h2>
-        <section id="{{ (index $aboutme 00).Title | urlize }}">
-          <h3>{{ (index $aboutme 00).Title }}</h3>
-          {{ (index $aboutme 00).Content }}
-        </section>
-        <section id="{{ (index $aboutme 01).Title | urlize }}">
-          <h3>{{ (index $aboutme 01).Title }}</h3>
-          {{ (index $aboutme 01).Content }}
-          <ul class="columns">
-            <li>
-              <svg><use xlink:href="/svg/sprite.svg#design"></use></svg>
-              Mobile-first, responsive web design
-            </li>
-            <li>
-              <svg><use xlink:href="/svg/sprite.svg#development"></use></svg>
-              Modern, efficient web development
-            </li>
-          </ul>
-        </section>
-        <section id="{{ (index $aboutme 02).Title | urlize }}">
-          <h3>{{ (index $aboutme 02).Title }}</h3>
-          {{ (index $aboutme 02).Content }}
-          <ul class="columns">
-          <li>
-            <svg><use xlink:href="/svg/sprite.svg#html"></use></svg>
-          </li>
-          <li>
-            <svg><use xlink:href="/svg/sprite.svg#css"></use></svg>
-          </li>
-          <li>
-            <svg><use xlink:href="/svg/sprite.svg#javascript"></use></svg>
-          </li>
-          <li>
-            <svg><use xlink:href="/svg/sprite.svg#github"></use></svg>
-          </li>
-          <li>
-            <svg><use xlink:href="/svg/sprite.svg#netlify"></use></svg>
-          </li>
-          <li>
-            <svg><use xlink:href="/svg/sprite.svg#hugo"></use></svg>
-          </li>
-          <li>
-            <svg><use xlink:href="/svg/sprite.svg#sass"></use></svg>
-          </li>
-          <li>
-            <svg><use xlink:href="/svg/sprite.svg#gimp"></use></svg>
-          </li>
-          <li>
-            <svg><use xlink:href="/svg/sprite.svg#figma"></use></svg>
-          </li>
-        </ul>
-        </section>
-      </div>
-      <div class="circuit-board"></div>
-    </section>
-
-    <section id="my-work">
-      <div class="content">
-        <h2>My Work</h2>
-        {{ range $mywork }}
-          <section class="project" id="{{ .Title | urlize }}">
-            <div class="overview">
-              <h3>{{ .Title }}</h3>
-              <figure class="images">
-                <div class="desktop">
-                  <div class="image">
-                    <img src="{{ .Params.desktopImage }}" alt="A preview of the {{ .Params.title }} website at desktop width">
-                  </div>
-                </div>
-                <div class="mobile">
-                  <div class="image">
-                    <img src="{{ .Params.mobileImage }}" alt="A preview of the {{ .Params.title }} website at mobile width">
-                  </div>
-                </div>
-              </figure>
-              <ul class=links>
-                <li class="web"><a href="{{ .Params.siteLink }}">Visit the site</a></li>
-                <li class="github"><a href="{{ .Params.gitLink }}">View on GitHub</a></li>
-              </ul>
-              <figure class="testimonial">
-                <blockquote>
-                  <p>{{ .Params.testimonial }}</p>
-                </blockquote>
-                <figcaption>{{ .Params.testimonialAuthor }}</figcaption>
-              </figure>
-            </div>
-            <div class="description hidden">
-              {{ .Content }}
-            </div>
-            {{ partial "hr-slide.html" }}
-          </section>
-        {{ end }}
-      </div>
-      <div class="circuit-board"></div>
-    </section>
-
-    <section id="let-s-talk">
-      <div class="content">
-        <h2>Let's Talk</h2>
-        {{ (index $letstalk 00).Content }}
-        <form action="">
-          <div class="top">
-            <div class="name container">
-              <input name="name" type="text" placeholder="Your name" required>
-              <label for="name">Your name</label>
-            </div>
-            <div class="email container">
-              <input name="email" type="email" placeholder="Your email address" required>
-              <label for="email">Your email address</label>
-            </div>
-          </div>
-          <!-- <div class="line two"> -->
-            <div class="message container">
-              <textarea name="message" id="message" placeholder="Your message" required></textarea>
-              <label for="message">Your message</label>
-            </div>
-          <!-- </div> -->
-          <!-- <div class="line three"> -->
-            <div class="submit container">
-              <input type="submit" value="Send">
-            </div>
-          <!-- </div> -->
-        </form>
-      </div>
-      <div class="circuit-board"></div>
-    </section>
-
+    {{ partial "about-me.html" . }}
+    {{ partial "my-work.html" . }}
+    {{ partial "let-s-talk.html" . }}
   </main>
 
   <footer>
-    <div class="content">
-      {{ partial "footer.html" . }}
-    </div>
+    {{ partial "footer.html" . }}
   </footer>
 
   <script src="js/main.js"></script>

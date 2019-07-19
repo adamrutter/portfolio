@@ -1,0 +1,32 @@
+{{ $letstalk := (.Site.GetPage "/home/let-s-talk").Resources.Match "section*" }}
+
+<section id="let-s-talk">
+  <div class="content">
+    <h2>Let's Talk</h2>
+    {{ (index $letstalk 00).Content }}
+    <form action="">
+      <div class="top">
+        <div class="name container">
+          <input name="name" type="text" placeholder="Your name" required>
+          <label for="name">Your name</label>
+        </div>
+        <div class="email container">
+          <input name="email" type="email" placeholder="Your email address" required>
+          <label for="email">Your email address</label>
+        </div>
+      </div>
+      <!-- <div class="line two"> -->
+        <div class="message container">
+          <textarea name="message" id="message" placeholder="Your message" required></textarea>
+          <label for="message">Your message</label>
+        </div>
+      <!-- </div> -->
+      <!-- <div class="line three"> -->
+        <div class="submit container">
+          <input type="submit" value="Send">
+        </div>
+      <!-- </div> -->
+    </form>
+  </div>
+  <div class="circuit-board"></div>
+</section>
