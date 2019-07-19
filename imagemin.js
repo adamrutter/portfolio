@@ -10,8 +10,8 @@ const srcDir = 'src/img';
 const staticDir = 'static/img';
 
 // Image quality
-const pngQuality = '100';
-const jpgQuality = 100;
+const pngQuality = '75';
+const jpgQuality = 75;
 
 // imagemin function
 function optimiseImg(filename, outputPath) {

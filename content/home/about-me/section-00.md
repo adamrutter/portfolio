@@ -1,5 +1,7 @@
 ---
 title: "Who I Am"
+image: "/img/pexels-photo-220453.jpeg"
+imageAlt: "A portrait of Adam"
 weight: 10
 ---
 

@@ -5,6 +5,9 @@
     <h2>About Me</h2>
     <section id="{{ (index $aboutme 00).Title | urlize }}">
       <h3>{{ (index $aboutme 00).Title }}</h3>
+      <figure class="portrait">
+        <img src="{{ (index $aboutme 00).Params.image }}" alt="{{ (index $aboutme 00).Params.imageAlt }}">
+      </figure>
       {{ (index $aboutme 00).Content }}
     </section>
     <section id="{{ (index $aboutme 01).Title | urlize }}">

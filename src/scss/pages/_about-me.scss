@@ -13,6 +13,42 @@
     color: $blue-600;
   }
 
+  .portrait {
+    @include shadow-100($grey-800);
+
+    border-radius: $border-radius;
+    height: 0;
+    margin: (line-height(default) * 2) 0;
+    overflow: hidden;
+    padding: 0 0 100% 0;
+    width: 100%;
+
+    @media only screen and (min-width: 475px) {
+      float: left;
+      margin: 0 (line-height(default) * 1) (line-height(default) * 1) 0;
+      padding: 0 0 38.2% 0;
+      width: 38.2%;
+    }
+
+    @media only screen and (min-width: 600px) {
+      margin: 0 (line-height(default) * 2) (line-height(default) * 2) 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  #who-i-am {
+    @media only screen and (min-width: 475px) {
+      margin-top: line-height(default) * 3;
+
+      h3 {
+        display: inline;
+      }
+    }
+  }
+
   ul.columns {
     color: $grey-600;
     display: flex;
