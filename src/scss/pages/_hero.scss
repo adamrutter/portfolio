@@ -58,7 +58,6 @@
       h1 {
         font-size: 54px;
         line-height: line-height(default) * 2;
-        // margin-top: line-height(default);
 
         @media only screen and (min-width: 350px) {
           font-size: 65px;
@@ -78,7 +77,6 @@
         .name {
           font-family: inherit;
           font-size: inherit;
-          // line-height: inherit;
 
           &.last {
             color: $blue-200;
@@ -91,12 +89,10 @@
 
         @media only screen and (min-width: 400px) {
           font-size: 20px;
-          // line-height: line-height(default) * 2;
         }
 
         @media only screen and (min-width: 490px) {
           font-size: 24px;
-          // line-height: line-height(default) * 2;
         }
       }
     }
@@ -121,17 +117,23 @@
     .svg {
       @include hero-image($blue-500);
 
-      // background-color: #0f0;
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       flex: 1;
-      position: relative;
+      margin: 15px;
       z-index: 1;
 
+      @media only screen and (min-width: 375px) {
+        margin: 0;
+      }
+
       @media only screen and (min-width: $breakpoint) {
-        background-position: center bottom;
-        background-size: contain;
+        align-self: center;
+        background-position: center top;
+        background-size: cover;
+        max-width: 375px;
+        width: 100%;
       }
     }
   }
