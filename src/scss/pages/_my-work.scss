@@ -96,5 +96,7 @@
 
   .circuit-board {
     @include circuit-board($blue-200, 0.3);
+
+    margin-top: line-height(default) * 8;
   }
 }
