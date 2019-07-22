@@ -2,7 +2,7 @@
 @import '../components/hero-image';
 
 #hero {
-  @include circuit-board-tileable($blue-200, 0.2);
+  @include circuit-board-tileable($blue-200, 0.15);
 
   $breakpoint: 750px;
 
@@ -16,7 +16,8 @@
 
   // Solid colour background
   &::after {
-    background: lighten($blue-500, 7.5%);
+    background: $blue-400;
+    // background: lighten($blue-500, 7.5%);
     content: '';
     height: 100vh;
     left: 61.8%;
@@ -30,110 +31,76 @@
     flex-direction: row;
   }
 
-  .text {
-    // background: #f00;
-    flex: 1.61803398875; // Golden ratio
-    position: relative;
-    white-space: nowrap;
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: absolute;
-      top: 50%;
-      top: calc(50% + #{line-height(default) * 1});
-      transform: translateY(-50%);
-      width: 100%;
-      z-index: 2;
-
-      @media only screen and (min-width: $breakpoint) {
-        top: calc(50% - #{line-height(default) * 2});
-      }
-
-      * {
-        margin: 0;
-      }
-
-      h1 {
-        font-size: 54px;
-        line-height: line-height(default) * 2;
-
-        @media only screen and (min-width: 350px) {
-          font-size: 65px;
-          line-height: line-height(default) * 2.5;
-        }
-
-        @media only screen and (min-width: 400px) {
-          font-size: 78px;
-          line-height: line-height(default) * 3;
-        }
-
-        @media only screen and (min-width: 490px) {
-          font-size: 93px;
-          line-height: line-height(default) * 3.5;
-        }
-
-        .name {
-          font-family: inherit;
-          font-size: inherit;
-
-          &.last {
-            color: $blue-200;
-          }
-        }
-      }
-
-      .sub {
-        order: -1;
-
-        @media only screen and (min-width: 400px) {
-          font-size: 20px;
-        }
-
-        @media only screen and (min-width: 490px) {
-          font-size: 24px;
-        }
-      }
-    }
-  }
-
-  .image {
+  .container {
     display: flex;
-    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    top: calc(50% - #{line-height(default) * 2});
+    transform: translateY(-50%);
+    white-space: nowrap;
+    width: 100%;
+    z-index: 2;
 
-    @media only screen and (min-width: $breakpoint) {
-      flex-direction: column;
+    * {
+      margin: 0;
     }
 
-    .spacer {
-      flex: 0;
+    h1 {
+      font-family: 'Bungee', sans-serif;
+      font-size: 37px;
+      font-weight: 500;
+      line-height: line-height(default) * 1.5;
 
-      @media only screen and (min-width: $breakpoint) {
-        flex: 1.61803398875; // Golden ratio
+      @media only screen and (min-width: 350px) {
+        font-size: 45px;
+        line-height: line-height(default) * 2;
+      }
+
+      @media only screen and (min-width: 425px) {
+        font-size: 54px;
+        line-height: line-height(default) * 2.5;
+      }
+
+      @media only screen and (min-width: 525px) {
+        font-size: 65px;
+        line-height: line-height(default) * 3;
+      }
+
+      @media only screen and (min-width: 625px) {
+        font-size: 78px;
+        line-height: line-height(default) * 3.5;
+      }
+
+      @media only screen and (min-width: 750px) {
+        font-size: 93px;
+        line-height: line-height(default) * 4;
+      }
+
+      .name {
+        font-family: inherit;
+        font-size: inherit;
+        text-shadow: 0px 1px 0px $grey-500;
+
+        &.last {
+          color: $blue-200;
+          text-shadow: 0px 1px 0px $blue-500;
+        }
       }
     }
 
-    .svg {
-      @include hero-image($blue-500);
+    .sub {
+      // color: $blue-200;
+      color: desaturate(lighten($blue-200, 5%), 10%);
+      order: -1;
 
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      flex: 1;
-      margin: 15px;
-      z-index: 1;
-
-      @media only screen and (min-width: 325px) {
-        margin: 0;
+      @media only screen and (min-width: 425px) {
+        font-size: 20px;
       }
 
-      @media only screen and (min-width: $breakpoint) {
-        align-self: center;
-        background-position: center top;
-        background-size: cover;
-        max-width: 375px;
-        width: 100%;
+      @media only screen and (min-width: 525px) {
+        font-size: 24px;
       }
     }
   }
