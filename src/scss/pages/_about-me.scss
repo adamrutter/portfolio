@@ -24,18 +24,34 @@
     width: 100%;
 
     @media only screen and (min-width: 475px) {
-      float: left;
-      margin: 0 (line-height(default) * 1) (line-height(default) * 1) 0;
+      float: right;
+      margin: 0 0 (line-height(default) * 1) (line-height(default) * 1);
       padding: 0 0 38.2% 0;
       width: 38.2%;
     }
 
     @media only screen and (min-width: 600px) {
-      margin: 0 (line-height(default) * 2) (line-height(default) * 2) 0;
+      margin: 0 0 (line-height(default) * 2) (line-height(default) * 2);
     }
 
     img {
       width: 100%;
+    }
+  }
+
+  ul.columns {
+    color: $grey-600;
+    display: flex;
+    list-style: none;
+    margin: (line-height(default) * 4) 0 (line-height(default) * 4) 0;
+    padding: 0;
+
+    li {
+      padding: 0;
+    }
+
+    svg {
+      fill: $blue-400;
     }
   }
 
@@ -49,53 +65,111 @@
     }
   }
 
-  ul.columns {
-    color: $grey-600;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: (line-height(default) * 2) 0 (line-height(default) * 3) 0;
-    padding: 0;
+  #what-i-do {
+    margin-top: line-height(default) * 6;
 
-    @media only screen and (min-width: 500px) {
-      margin: (line-height(default) * 3) 0 (line-height(default) * 4) 0;
-    }
-
-    li {
-      padding: 0;
-    }
-
-    svg {
-      fill: $blue-400;
-    }
-  }
-
-  #what-i-do ul.columns {
-    justify-content: space-around;
-
-    li {
-      font-size: round(map-get($base-size, default) * 0.9);
-      height: line-height(default) * 10;
-      line-height: round(line-height(default) * 0.8);
-      margin: 0 (line-height(default) * 0.25);
+    h3 {
       text-align: center;
-      width: 100px;
-
-      @media only screen and (min-width: 500px) {
-        width: 125px;
-      }
     }
 
-    svg {
-      width: 100%;
+    ul.columns {
+      flex-direction: column;
+      justify-content: space-around;
+      left: 50%;
+      margin: (line-height(default) * 1) 0 (line-height(default) * 5) 0;
+      max-width: 850px;
+      position: relative;
+      top: 0;
+      transform: translateX(-50%);
+      width: 100vw;
 
-      @media only screen and (min-width: 500px) {
-        margin-bottom: line-height(default);
+      // Background
+      &::after {
+        background: darken($grey-200, 7.5%);
+        content: '';
+        height: 85%;
+        height: calc(100% - #{line-height(default) * 5.25});
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%) skewY(-#{$skew});
+        width: 100%;
+        width: 100vw;
+        z-index: -1;
+
+        @media only screen and (min-width: 750px) {
+          height: 75%;
+        }
+      }
+
+      @media only screen and (min-width: 750px) {
+        flex-direction: row;
+      }
+
+      li {
+        @include shadow-500($grey-800);
+
+        background: $grey-200;
+        border-radius: $border-radius;
+        margin: line-height(default) * 1;
+        overflow: hidden;
+        padding: line-height(default);
+        padding-top: 0;
+
+        // Deal with non-collapsing margins within flexbox
+        &:first-child {
+          margin-bottom: line-height(default) * 0.5;
+
+          @media only screen and (min-width: 750px) {
+            margin-bottom: line-height(default) * 1;
+            margin-right: line-height(default) * 0.5;
+          }
+
+          @media only screen and (min-width: 925px) {
+            margin-right: line-height(default) * 1;
+          }
+        }
+
+        // Deal with non-collapsing margins within flexbox
+        &:last-child {
+          margin-top: line-height(default) * 0.5;
+
+          @media only screen and (min-width: 750px) {
+            margin-top: line-height(default) * 1;
+            margin-left: line-height(default) * 0.5;
+          }
+
+          @media only screen and (min-width: 925px) {
+            margin-left: line-height(default) * 1;
+          }
+        }
+
+        .heading {
+          background: $blue-500;
+          margin: 0 -#{line-height(default)};
+          margin-bottom: line-height(default);
+          padding: line-height(default);
+
+          h4 {
+            color: $grey-200;
+            font-size: 22px;
+            line-height: line-height(default) * 1;
+            margin: 0;
+            text-align: center;
+          }
+        }
+      }
+
+      svg {
+        height: line-height(default) * 5;
+        margin: line-height(default) 0;
+        width: 100%;
       }
     }
   }
 
   #how-i-do-it ul.columns {
+    flex-wrap: wrap;
     justify-content: space-around;
 
     @media only screen and (min-width: 500px) {

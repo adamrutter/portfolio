@@ -1,32 +1,37 @@
-{{ $aboutme := (.Site.GetPage "/home/about-me").Resources.Match "section*" }}
+{{ $whoiam := (.Site.GetPage "/home/about-me/who-i-am").Resources.Match "section*" }}
+{{ $whatido := (.Site.GetPage "/home/about-me/what-i-do").Resources.Match "section*" }}
+{{ $howidoit := (.Site.GetPage "/home/about-me/how-i-do-it").Resources.Match "section*" }}
 
 <section id="about-me">
   <div class="content">
     <h2>About Me</h2>
-    <section id="{{ (index $aboutme 00).Title | urlize }}">
-      <h3>{{ (index $aboutme 00).Title }}</h3>
+
+    <section id="{{ (index $whoiam 00).Title | urlize }}">
+      <h3>{{ (index $whoiam 00).Title }}</h3>
       <figure class="portrait">
-        <img src="{{ (index $aboutme 00).Params.image }}" alt="{{ (index $aboutme 00).Params.imageAlt }}">
+        <img src="{{ (index $whoiam 00).Params.image }}" alt="{{ (index $whoiam 00).Params.imageAlt }}">
       </figure>
-      {{ (index $aboutme 00).Content }}
+      {{ (index $whoiam 00).Content }}
     </section>
-    <section id="{{ (index $aboutme 01).Title | urlize }}">
-      <h3>{{ (index $aboutme 01).Title }}</h3>
-      {{ (index $aboutme 01).Content }}
+
+    <section id="what-i-do">
+      <h3>{{ path.Base (index $whatido 00).Dir | title | replaceRE "(-)" " " }}</h3>
       <ul class="columns">
-        <li>
-          <svg><use xlink:href="/svg/sprite.svg#design"></use></svg>
-          Mobile-first, responsive web design
-        </li>
-        <li>
-          <svg><use xlink:href="/svg/sprite.svg#development"></use></svg>
-          Modern, efficient web development
-        </li>
+        {{ range $whatido }}
+          <li>
+            <div class="heading">
+              <h4>{{ .Title }}</h4>
+            </div>
+            <svg><use xlink:href="/svg/sprite.svg#{{ path.Base .Params.image | replaceRE "(\\.svg)" "" }}"></use></svg>
+            {{ .Content }}
+          </li>
+        {{ end }}
       </ul>
     </section>
-    <section id="{{ (index $aboutme 02).Title | urlize }}">
-      <h3>{{ (index $aboutme 02).Title }}</h3>
-      {{ (index $aboutme 02).Content }}
+
+    <section id="{{ (index $howidoit 00).Title | urlize }}">
+      <h3>{{ (index $howidoit 00).Title }}</h3>
+      {{ (index $howidoit 00).Content }}
       <ul class="columns">
       <li>
         <svg><use xlink:href="/svg/sprite.svg#html"></use></svg>
@@ -57,6 +62,7 @@
       </li>
     </ul>
     </section>
+
   </div>
   <div class="circuit-board"></div>
 </section>
