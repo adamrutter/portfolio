@@ -43,6 +43,10 @@
       @media (hover: hover) {
         &:hover {
           transform: translateY(-8px);
+
+          a {
+            color: white;
+          }
         }
       }
 
@@ -83,12 +87,45 @@
         transition: color 0.2s ease-in-out;
       }
 
-      // Hover styles; only if the device supports it. This stops touch devices using hover styles
-      // on focus
+      // Active/hover indicator; currently not visible, will be made visible when the navbar has a
+      // background
+      .highlight {
+        height: 100%;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        top: calc(100% + 4px);
+        transform: translateX(-50%);
+        transition: transform 0.2s ease-in-out;
+        width: 100%;
+        width: calc(100% + 20px);
+
+        &::after {
+          content: '';
+          border-radius: 50%;
+          height: 5px;
+          position: absolute;
+          right: 4px;
+          top: -1px;
+          transform: translateX(50%) translateY(-50%);
+          transition: background 0.2s ease-in-out;
+          width: 5px;
+        }
+      }
+
+      // Align the highlight on active li
+      &.active {
+        .highlight {
+          transform: translateX(-50%) translateY(-15px);
+        }
+      }
+
+      // Align the highlight on hovered li
       @media (hover: hover) {
         &:hover {
-          a {
-            color: white;
+          .highlight {
+            transform: translateX(-50%) translateY(-20px);
           }
         }
       }
@@ -113,51 +150,14 @@
         }
       }
 
-      // Active/hover indicator
+      // Make active/hover indicator visible
       .highlight {
         border-left: 2px solid $blue-300;
         border-top: 2px solid $blue-300;
-        height: 100%;
-        left: 50%;
-        pointer-events: none;
-        position: absolute;
-        top: 100%;
-        top: calc(100% + 4px);
-        transform: translateX(-50%);
-        transition: transform 0.2s ease-in-out;
-        width: 100%;
-        width: calc(100% + 20px);
 
         &::after {
-          // background: $blue-500;
           background: $blue-600;
           border: 2px solid $blue-300;
-          content: '';
-          border-radius: 50%;
-          height: 5px;
-          position: absolute;
-          right: 4px;
-          top: -1px;
-          transform: translateX(50%) translateY(-50%);
-          transition: background 0.2s ease-in-out;
-          width: 5px;
-        }
-      }
-
-      // Align the highlight on active li
-      &.active {
-        .highlight {
-          transform: translateX(-50%) translateY(-15px);
-        }
-      }
-
-      // Align the highlight on hovered li, but only if the device supports hover; this stops touch
-      // devices using hover styles on focus
-      @media (hover: hover) {
-        &:hover {
-          .highlight {
-            transform: translateX(-50%) translateY(-20px);
-          }
         }
       }
     }
