@@ -12,6 +12,11 @@
     background: $blue-500;
   }
 
+  h3 {
+    color: $grey-200;
+    line-height: line-height(default) * 1.5;
+  }
+
   .testimonial {
     padding: 0 (line-height(default) * 0.5);
 
@@ -97,6 +102,6 @@
   .circuit-board {
     @include circuit-board($blue-200, 0.3);
 
-    margin-top: line-height(default) * 8;
+    // margin-top: line-height(default) * 8;
   }
 }

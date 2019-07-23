@@ -42,6 +42,8 @@
   }
 
   .desktop {
+    @include shadow-100($grey-800);
+
     $frame-size: 8px;
     $stand-height: 1;
     $stand-width: 50px;
@@ -54,6 +56,8 @@
     width: 100%;
 
     &::before {
+      @include shadow-100($grey-800);
+
       background: $blue-700;
       bottom: -#{line-height(default) * $stand-height};
       content: '';
@@ -65,6 +69,8 @@
     }
 
     &::after {
+      @include shadow-100($grey-800);
+
       background: $blue-700;
       border-radius: 5px 5px 0 0;
       bottom: -#{line-height(default) * $stand-height};
@@ -99,6 +105,8 @@
   }
 
   .mobile {
+    @include shadow-300($grey-800);
+
     $frame-size: 6px;
 
     background: $blue-600;
@@ -128,7 +136,7 @@
     }
 
     &::after {
-      background: $blue-400;
+      background: $blue-500;
       border-radius: 99px;
       content: '';
       height: $frame-size * 0.25;
