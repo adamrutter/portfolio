@@ -10,7 +10,8 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-main a {
+main a,
+footer a {
   color: $blue-600;
   font-weight: 700;
   position: relative;
@@ -28,11 +29,13 @@ main a {
     z-index: -1;
   }
 
-  &:hover {
-    color: $blue-700;
+  @media (hover: hover) {
+    &:hover {
+      color: $blue-700;
 
-    &::after {
-      height: line-height(default) * 0.3;
+      &::after {
+        height: line-height(default) * 0.3;
+      }
     }
   }
 }

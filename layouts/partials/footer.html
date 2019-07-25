@@ -1,3 +1,23 @@
+{{ $links := (.Site.GetPage "/footer/external-links").Resources.Match "section*" }}
+
 <div class="content">
-  Footer
+  <nav>
+    <ul>
+      <li><a href="#about-me">About Me</a></li>
+      <li><a href="#my-work">My Work</a></li>
+      <li><a href="#let-s-talk">Let's Talk</a></li>
+    </ul>
+  </nav>
+  <div class="external-links">
+    {{ range $links }}
+      <div class="{{ .Title | urlize }}">
+        <a href="{{ .Params.link }}" target="_blank" aria-label="View my profile on {{ .Title }}">
+          <svg><use xlink:href="/svg/sprite.svg#{{ path.Base .Params.image | replaceRE "(\\.svg)" "" }}"></use></svg>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+  <div class="copyright">
+    Copyright &copy; <span class="year"></span>
+  </div>
 </div>
