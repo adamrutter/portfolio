@@ -1,18 +1,27 @@
 .navbar {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
   height: line-height(default) * 3;
+  justify-content: space-between;
   overflow: hidden;
-  padding: 0;
+  padding: 0 (line-height(default) * 1);
   position: fixed;
   top: 0;
   transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out;
   width: 100%;
   z-index: 100;
 
+  @media only screen and (min-width: 550px) {
+    padding: 0 (line-height(default) * 2);
+  }
+
+  @media only screen and (min-width: 750px) {
+    padding: 0 (line-height(default) * 3);
+  }
+
   .content {
-    align-items: center;
-    display: flex;
     height: 100%;
-    justify-content: space-between;
   }
 
   // Main navigation
@@ -26,7 +35,7 @@
     text-align: center;
     width: 100%;
 
-    @media only screen and (min-width: 475px) {
+    @media only screen and (min-width: 550px) {
       width: auto;
     }
 
@@ -42,7 +51,7 @@
       // Hover styles
       @media (hover: hover) {
         &:hover {
-          transform: translateY(-8px);
+          transform: translateY(-4px);
 
           a {
             color: white;
@@ -63,7 +72,7 @@
         }
       }
 
-      @media only screen and (min-width: 475px) {
+      @media only screen and (min-width: 550px) {
 
         // Selector list to ensure the above selector doesn't have higher specificity and code only
         // has to be written once
@@ -170,7 +179,7 @@
     font-family: 'Bungee', sans-serif;
     font-size: 36px;
 
-    @media only screen and (min-width: 475px) {
+    @media only screen and (min-width: 550px) {
       display: inline-block;
     }
 
