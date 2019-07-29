@@ -13,11 +13,31 @@ collections:
     editor:
       preview: false
     files:
-      - label: "What I Do 1"
-        name: "what-i-do"
+      - label: "Who I Am"
+        name: "who-i-am"
+        file: "content/home/about-me/who-i-am/section-00.md"
+        fields:
+          - {label: "Heading", name: "title", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Image alt text", name: "imageAlt", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - label: "What I Do (1)"
+        name: "what-i-do-1"
         file: "content/home/about-me/what-i-do/section-00.md"
-        create: false
         fields:
           - {label: "Heading", name: "title", widget: "string"}
           - {label: "Order", name: "weight", widget: "number"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - label: "What I Do (2)"
+        name: "what-i-do-2"
+        file: "content/home/about-me/what-i-do/section-01.md"
+        fields:
+          - {label: "Heading", name: "title", widget: "string"}
+          - {label: "Order", name: "weight", widget: "number"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - label: "How I Do It"
+        name: "how-i-do-it"
+        file: "content/home/about-me/how-i-do-it/section-00.md"
+        fields:
+          - {label: "Heading", name: "title", widget: "string"}
           - {label: "Content", name: "body", widget: "markdown"}
