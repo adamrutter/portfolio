@@ -1,5 +1,9 @@
 node_modules
 public
 resources
-static/*
-!static/admin
+static/css/*.css
+static/js/*.js
+static/img/*.jpeg
+static/img/*.jpg
+static/img/*.png
+static/svg/*.svg
