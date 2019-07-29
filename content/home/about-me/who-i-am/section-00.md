@@ -1,8 +1,7 @@
 ---
-title: "Who I Am"
-image: "/img/pexels-photo-220453.jpeg"
-imageAlt: "A portrait of Adam"
-weight: 10
+title: Who I Am
+image: /img/20170917_141741.jpg
+imageAlt: A portrait of Adam
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
