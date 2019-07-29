@@ -8,8 +8,16 @@ media_folder: "src/img"
 public_folder: "/img"
 
 collections:
-  - label: "what-i-do"
-    name: "What I Do"
-    folder: "home/about-me/what-i-do"
-    fields:
-      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "About Me"
+    name: "about-me"
+    editor:
+      preview: false
+    files:
+      - label: "What I Do 1"
+        name: "what-i-do"
+        file: "content/home/about-me/what-i-do/section-00.md"
+        create: false
+        fields:
+          - {label: "Heading", name: "title", widget: "string"}
+          - {label: "Order", name: "weight", widget: "number"}
+          - {label: "Content", name: "body", widget: "markdown"}
