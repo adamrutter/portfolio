@@ -14,7 +14,11 @@
 
   h3 {
     color: $grey-200;
-    line-height: line-height(default) * 1.5;
+    line-height: floor(line-height(default) * 1.5);
+
+    @media only screen and (min-width: 559px) {
+      line-height: line-height(default) * 2;
+    }
   }
 
   .testimonial {
@@ -96,12 +100,14 @@
   }
 
   .hr {
-    margin: (line-height(default) * 1) 0 (line-height(default) * 7) 0;
+    margin: (line-height(default) * 1) 0 (line-height(default) * 6) 0;
+
+    @media only screen and (min-width: 700px) {
+      margin-bottom: line-height(default) * 7;
+    }
   }
 
   .circuit-board {
     @include circuit-board($blue-200, 0.3);
-
-    // margin-top: line-height(default) * 8;
   }
 }

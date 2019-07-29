@@ -25,13 +25,13 @@
 
     @media only screen and (min-width: 475px) {
       float: right;
-      margin: 0 0 (line-height(default) * 1) (line-height(default) * 1);
+      margin: 81px 0 (line-height(default) * 1) (line-height(default) * 1); // Top margin has to be same as the adjacent heading
       padding: 0 0 38.2% 0;
       width: 38.2%;
     }
 
     @media only screen and (min-width: 600px) {
-      margin: 0 0 (line-height(default) * 2) (line-height(default) * 2);
+      margin: 81px 0 (line-height(default) * 2) (line-height(default) * 2); // Top margin has to be same as the adjacent heading
     }
 
     img {
@@ -43,7 +43,6 @@
     color: $grey-600;
     display: flex;
     list-style: none;
-    margin: (line-height(default) * 4) 0 (line-height(default) * 4) 0;
     padding: 0;
 
     li {
@@ -57,16 +56,16 @@
 
   #who-i-am {
     @media only screen and (min-width: 475px) {
-      margin-top: line-height(default) * 3;
 
       h3 {
-        display: inline;
+        display: inline-block;
+        margin-bottom: 0;
       }
     }
   }
 
   #what-i-do {
-    margin-top: line-height(default) * 6;
+    margin: (line-height(default) * 4) 0;
 
     h3 {
       text-align: center;
@@ -76,7 +75,6 @@
       flex-direction: column;
       justify-content: space-around;
       left: 50%;
-      margin: (line-height(default) * 1) 0 (line-height(default) * 5) 0;
       max-width: 850px;
       position: relative;
       top: 0;
@@ -147,7 +145,6 @@
         .heading {
           background: $blue-500;
           margin: 0 -#{line-height(default)};
-          margin-bottom: line-height(default);
           padding: line-height(default);
 
           h4 {
@@ -161,16 +158,23 @@
       }
 
       svg {
+        display: flex; // For alignment
         height: line-height(default) * 5;
-        margin: line-height(default) 0;
+        margin: (line-height(default) * 2) 0;
         width: 100%;
       }
+    }
+
+    // Whole section media queries
+    @media only screen and (min-width: 700px) {
+      margin: (line-height(default) * 6) 0;
     }
   }
 
   #how-i-do-it ul.columns {
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: (line-height(default) * 2) 0;
 
     @media only screen and (min-width: 500px) {
     }
@@ -193,7 +197,5 @@
 
   .circuit-board {
     @include circuit-board($grey-400, 0.5);
-
-    margin-top: line-height(default) * 7;
   }
 }

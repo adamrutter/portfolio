@@ -3,7 +3,6 @@
 #let-s-talk {
   height: 100%;
   height: calc(100% + 50px);
-  padding-top: (line-height(default) * 2);
   position: relative;
 
   // &::before {
@@ -32,9 +31,18 @@
     white-space: nowrap;
   }
 
+  .content {
+    margin-bottom: line-height(default) * 7;
+    padding-top: line-height(default) * 1;
+
+    @media only screen and (min-width: 700px) {
+      margin-bottom: line-height(default) * 9;
+      padding-top: line-height(default) * 2;
+    }
+  }
+
   .circuit-board {
     height: line-height(default) * 10;
-    margin-top: line-height(default) * 8;
     width: 100vw;
   }
 }

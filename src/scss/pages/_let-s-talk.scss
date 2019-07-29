@@ -5,7 +5,6 @@
 
 #let-s-talk {
   background: $grey-200;
-  padding-top: line-height(default) * 3;
   z-index: 4;
 
   // Diagonal section divider
@@ -18,12 +17,12 @@
   }
 
   form {
-    margin: (line-height(default) * 3) 0 (line-height(default) * 2) 0;
+    margin: (line-height(default) * 3) 0 (line-height(default) * 3) 0;
 
     input[type="text"],
     input[type="email"],
     textarea {
-      margin: #{line-height(default) * 0.5} 0;
+      margin: floor(line-height(default) * 0.5) 0;
       padding-left: line-height(default) * 1.75;
     }
 
@@ -78,6 +77,8 @@
     }
 
     .message.container {
+      display: flex; // Fixes vertical alignment issue in Chrome
+
       &::before {
         @include message-icon($grey-500);
       }
