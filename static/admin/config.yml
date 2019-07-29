@@ -1,12 +1,9 @@
 backend:
   name: git-gateway
   branch: netlify-cms
-
 publish_mode: editorial_workflow
-
 media_folder: "src/img"
 public_folder: "/img"
-
 collections:
   - label: "About Me"
     name: "about-me"
