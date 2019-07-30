@@ -1,13 +1,14 @@
 ---
-title: "Suzanne Hill School of Dance"
-markup: "mmark"
-desktopImage: "/img/desktop-image.png"
-mobileImage: "/img/mobile-image.png"
-siteLink: "#"
-githubLink: "#"
-testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-testimonialAuthor: "Jane Doe"
+title: 'Suzanne Hill School of Dance'
+markup: 'mmark'
+desktopImage: '/img/desktop-image.png'
+mobileImage: '/img/mobile-image.png'
+siteLink: '#'
+githubLink: '#'
+testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+testimonialAuthor: 'Jane Doe'
 weight: 20
+editor: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
