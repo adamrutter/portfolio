@@ -56,10 +56,5 @@ collections:
       - { label: 'Site link', name: 'siteLink', widget: 'string', required: false }
       - { label: 'GitHub link', name: 'githubLink', widget: 'string', required: false }
       - { label: 'Testitmonial', name: 'testimonial', widget: 'markdown', required: false }
-      - {
-          label: 'Testimonial author',
-          name: 'testimonialAuthor',
-          widget: 'string',
-          required: false,
-        }
-      - { label: 'Project description', name: 'body', widget: 'markdown' }
+      - { label: 'Testimonial author', name: 'testimonialAuthor', widget: 'string', required: false }
+      - { label: 'Project description', name: 'body', widget: 'markdown'}
