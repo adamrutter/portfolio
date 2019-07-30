@@ -2,39 +2,59 @@ backend:
   name: git-gateway
   branch: netlify-cms
 publish_mode: editorial_workflow
-media_folder: "src/img"
-public_folder: "/img"
+media_folder: 'src/img'
+public_folder: '/img'
 collections:
-  - label: "About Me"
-    name: "about-me"
+  - label: 'About Me'
+    name: 'about-me'
     editor:
       preview: false
     files:
-      - label: "Who I Am"
-        name: "who-i-am"
-        file: "content/home/about-me/who-i-am/section-00.md"
+      - label: 'Who I Am'
+        name: 'who-i-am'
+        file: 'content/home/about-me/who-i-am/section-00.md'
         fields:
-          - {label: "Heading", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Image alt text", name: "imageAlt", widget: "string"}
-          - {label: "Content", name: "body", widget: "markdown"}
-      - label: "What I Do (1)"
-        name: "what-i-do-1"
-        file: "content/home/about-me/what-i-do/section-00.md"
+          - { label: 'Heading', name: 'title', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Image alt text', name: 'imageAlt', widget: 'string' }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
+      - label: 'What I Do (1)'
+        name: 'what-i-do-1'
+        file: 'content/home/about-me/what-i-do/section-00.md'
         fields:
-          - {label: "Heading", name: "title", widget: "string"}
-          - {label: "Order", name: "weight", widget: "number"}
-          - {label: "Content", name: "body", widget: "markdown"}
-      - label: "What I Do (2)"
-        name: "what-i-do-2"
-        file: "content/home/about-me/what-i-do/section-01.md"
+          - { label: 'Heading', name: 'title', widget: 'string' }
+          - { label: 'Order', name: 'weight', widget: 'number' }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
+      - label: 'What I Do (2)'
+        name: 'what-i-do-2'
+        file: 'content/home/about-me/what-i-do/section-01.md'
         fields:
-          - {label: "Heading", name: "title", widget: "string"}
-          - {label: "Order", name: "weight", widget: "number"}
-          - {label: "Content", name: "body", widget: "markdown"}
-      - label: "How I Do It"
-        name: "how-i-do-it"
-        file: "content/home/about-me/how-i-do-it/section-00.md"
+          - { label: 'Heading', name: 'title', widget: 'string' }
+          - { label: 'Order', name: 'weight', widget: 'number' }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
+      - label: 'How I Do It'
+        name: 'how-i-do-it'
+        file: 'content/home/about-me/how-i-do-it/section-00.md'
         fields:
-          - {label: "Heading", name: "title", widget: "string"}
-          - {label: "Content", name: "body", widget: "markdown"}
+          - { label: 'Heading', name: 'title', widget: 'string' }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
+  - label: 'My Work'
+    label_singular: 'Project'
+    name: 'my-work'
+    editor:
+      preview: false
+    filter: { field: 'editor', value: true }
+    folder: 'content/home/my-work'
+    create: true
+    fields:
+      - { label: 'Heading', name: 'title', widget: 'string', required: true }
+      - { label: 'Markup', name: 'markup', widget: 'hidden', default: 'mmark' }
+      - { label: 'Editor', name: 'editor', widget: 'hidden', default: 'true' }
+      - { label: 'Order', name: 'weight', widget: 'number' }
+      - { label: 'Desktop image', name: 'desktopImage', widget: 'image', required: true }
+      - { label: 'Mobile image', name: 'mobileImage', widget: 'image', required: true }
+      - { label: 'Site link', name: 'siteLink', widget: 'string' }
+      - { label: 'GitHub link', name: 'githubLink', widget: 'string' }
+      - { label: 'Testitmonial', name: 'testimonial', widget: 'markdown' }
+      - { label: 'Testimonial author', name: 'testimonialAuthor', widget: 'string' }
+      - { label: 'Project description', name: 'body', widget: 'markdown', required: true }
