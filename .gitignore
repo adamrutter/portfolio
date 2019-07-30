@@ -2,7 +2,9 @@ node_modules
 public
 resources
 static/css/*.css
+static/css/*.map
 static/js/*.js
+static/js/*.map
 static/img/*.jpeg
 static/img/*.jpg
 static/img/*.png
