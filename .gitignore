@@ -1,4 +1,11 @@
 node_modules
 public
 resources
-static
+static/css/*.css
+static/css/*.map
+static/js/*.js
+static/js/*.map
+static/img/*.jpeg
+static/img/*.jpg
+static/img/*.png
+static/svg/*.svg
