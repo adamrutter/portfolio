@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Barlow+Semi+Condensed:700|Titillium+Web:400,400i,700&display=swap" rel="stylesheet">
-    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Bungee|Barlow+Semi+Condensed:700|Titillium+Web:400,400i,700&display=swap" rel="stylesheet">
     <link rel="preload" href="/svg/sprite.svg" as="image">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="{{ block "description" . }}{{ .Params.Description }}{{ end }}">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="stylesheet" href="/css/main.css">
     {{ if eq .RelPermalink "/" }}<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>{{ end }}
     <title>{{ .Site.Title }}</title>
   </head>
