@@ -1,154 +1,155 @@
 .project .images {
-  height: line-height(default) * 5;
-  margin: (line-height(default) * 2) auto (line-height(default) * 3) auto;
-  padding: 0;
-  position: relative;
-  width: 100%;
-  width: calc(100% - #{line-height(default) * 1});
+	height: line-height(default) * 5;
+	margin: (line-height(default) * 2) auto (line-height(default) * 3) auto;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	width: calc(100% - #{line-height(default) * 1});
 
-  @media only screen and (min-width: 400px) {
-    height: line-height(default) * 6;
-  }
+	@media only screen and (min-width: 400px) {
+		height: line-height(default) * 6;
+	}
 
-  @media only screen and (min-width: 450px) {
-    height: line-height(default) * 7;
-  }
+	@media only screen and (min-width: 450px) {
+		height: line-height(default) * 7;
+	}
 
-  @media only screen and (min-width: 500px) {
-    height: line-height(default) * 8;
-  }
+	@media only screen and (min-width: 500px) {
+		height: line-height(default) * 8;
+	}
 
-  @media only screen and (min-width: 550px) {
-    height: line-height(default) * 9;
-  }
+	@media only screen and (min-width: 550px) {
+		height: line-height(default) * 9;
+	}
 
-  @media only screen and (min-width: 600px) {
-    height: line-height(default) * 10;
-    margin-bottom: line-height(default) * 4;
-  }
+	@media only screen and (min-width: 600px) {
+		height: line-height(default) * 10;
+		margin-bottom: line-height(default) * 4;
+	}
 
-  .desktop,
-  .mobile {
-    box-sizing: border-box;
+	.desktop,
+	.mobile {
+		box-sizing: border-box;
 
-    .image {
-      height: 100%;
-      overflow: hidden;
+		.image {
+			height: 100%;
+			overflow: hidden;
 
-      img {
-        width: 100%;
-      }
-    }
-  }
+			img {
+				width: 100%;
+			}
+		}
+	}
 
-  .desktop {
-    @include shadow-100($grey-800);
+	.desktop {
+		@include shadow-100($grey-800);
 
-    $frame-size: 8px;
-    $stand-height: 1;
-    $stand-width: 50px;
+		$frame-size: 8px;
+		$stand-height: 1;
+		$stand-width: 50px;
 
-    background: $blue-700;
-    border-radius: 5px;
-    height: 100%;
-    padding: $frame-size;
-    position: relative;
-    width: 100%;
+		background: $blue-700;
+		border-radius: 5px;
+		height: 100%;
+		padding: $frame-size;
+		position: relative;
+		width: 100%;
 
-    &::before {
-      @include shadow-100($grey-800);
+		&::before {
+			@include shadow-100($grey-800);
 
-      background: $blue-700;
-      bottom: -#{line-height(default) * $stand-height};
-      content: '';
-      height: line-height(default) * $stand-height;
-      left: 50%;
-      position: absolute;
-      transform: translateX(-50%) perspective(10px) rotateX(2deg) translateY(-5px);
-      width: $stand-width;
-    }
+			background: $blue-700;
+			bottom: -#{line-height(default) * $stand-height};
+			content: '';
+			height: line-height(default) * $stand-height;
+			left: 50%;
+			position: absolute;
+			transform: translateX(-50%) perspective(10px) rotateX(2deg)
+				translateY(-5px);
+			width: $stand-width;
+		}
 
-    &::after {
-      @include shadow-100($grey-800);
+		&::after {
+			@include shadow-100($grey-800);
 
-      background: $blue-700;
-      border-radius: 5px 5px 0 0;
-      bottom: -#{line-height(default) * $stand-height};
-      content: '';
-      height: $frame-size;
-      left: 50%;
-      position: absolute;
-      transform: translateX(-50%);
-      width: $stand-width * 2;
-    }
+			background: $blue-700;
+			border-radius: 5px 5px 0 0;
+			bottom: -#{line-height(default) * $stand-height};
+			content: '';
+			height: $frame-size;
+			left: 50%;
+			position: absolute;
+			transform: translateX(-50%);
+			width: $stand-width * 2;
+		}
 
-    @media only screen and (min-width: 600px) {
-      $frame-size: 10px;
-      $stand-height: 2;
-      $stand-width: 65px;
+		@media only screen and (min-width: 600px) {
+			$frame-size: 10px;
+			$stand-height: 2;
+			$stand-width: 65px;
 
-      padding: $frame-size;
-      width: calc(100% - #{line-height(default)});
+			padding: $frame-size;
+			width: calc(100% - #{line-height(default)});
 
-      &::before {
-        bottom: -#{line-height(default) * $stand-height};
-        height: line-height(default) * $stand-height;
-        width: $stand-width;
-      }
+			&::before {
+				bottom: -#{line-height(default) * $stand-height};
+				height: line-height(default) * $stand-height;
+				width: $stand-width;
+			}
 
-      &::after {
-        bottom: -#{line-height(default) * $stand-height};
-        height: $frame-size;
-        width: $stand-width * 2;
-      }
-    }
-  }
+			&::after {
+				bottom: -#{line-height(default) * $stand-height};
+				height: $frame-size;
+				width: $stand-width * 2;
+			}
+		}
+	}
 
-  .mobile {
-    @include shadow-300($grey-800);
+	.mobile {
+		display: none;
 
-    $frame-size: 6px;
+		@media only screen and (min-width: 600px) {
+			@include shadow-300($grey-800);
 
-    background: $blue-600;
-    border-radius: 10px;
-    bottom: -#{line-height(default) * 2};
-    display: none;
-    height: 100%;
-    padding: $frame-size;
-    position: absolute;
-    right: 0;
-    width: 130px;
+			$frame-size: 6px;
 
-    @media only screen and (min-width: 600px) {
-      display: block;
-    }
+			background: $blue-600;
+			border-radius: 10px;
+			bottom: -#{line-height(default) * 2};
+			display: block;
+			height: 100%;
+			padding: $frame-size;
+			position: absolute;
+			right: 0;
+			width: 130px;
 
-    &::before {
-      background: $blue-600;
-      border-radius: 0 0 5px 5px;
-      content: '';
-      height: $frame-size;
-      left: 50%;
-      position: absolute;
-      top: $frame-size;
-      transform: translateX(-50%);
-      width: 45px;
-    }
+			&::before {
+				background: $blue-600;
+				border-radius: 0 0 5px 5px;
+				content: '';
+				height: $frame-size;
+				left: 50%;
+				position: absolute;
+				top: $frame-size;
+				transform: translateX(-50%);
+				width: 45px;
+			}
 
-    &::after {
-      background: $blue-500;
-      border-radius: 99px;
-      content: '';
-      height: $frame-size * 0.25;
-      left: 50%;
-      position: absolute;
-      top: $frame-size * 1;
-      transform: translateX(-50%);
-      width: 15px;
-    }
+			&::after {
+				background: $blue-500;
+				border-radius: 99px;
+				content: '';
+				height: $frame-size * 0.25;
+				left: 50%;
+				position: absolute;
+				top: $frame-size * 1;
+				transform: translateX(-50%);
+				width: 15px;
+			}
 
-    .image {
-      border-radius: 8px;
-    }
-  }
+			.image {
+				border-radius: 8px;
+			}
+		}
+	}
 }
