@@ -91,7 +91,6 @@
         font-weight: 400;
         height: 100%;
         // opacity: 0.95;
-        outline: none;
         text-decoration: none;
         transition: color 0.2s ease-in-out;
       }
@@ -174,19 +173,22 @@
 
   // Logo
   .logo {
-    color: $grey-200;
     display: none;
-    font-family: 'Bungee', sans-serif;
-    font-size: 36px;
 
     @media only screen and (min-width: 550px) {
       display: inline-block;
-    }
 
-    .blue {
-      // color: $blue-200;
-      font-family: inherit;
-      font-size: inherit;
+      a {
+        color: $grey-200;
+        font-family: 'Bungee', sans-serif;
+        font-size: 36px;
+        text-decoration: none;
+        vertical-align: bottom;
+      }
     }
+  }
+
+  a:active {
+    outline: none;
   }
 }
