@@ -69,3 +69,13 @@ collections:
         fields:
           - { label: 'Heading', name: 'title', widget: 'string' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
+  - label: 'Description'
+    name: 'description'
+    editor:
+      preview: false
+    files:
+      - label: 'Description'
+        name: 'description'
+        file: 'content/_index.md'
+        fields:
+          - { label: 'Description', name: 'description', widget: 'string', hint: 'For SEO; displayed in search rankings' }
