@@ -1,0 +1,17 @@
+.navbar,
+#hero,
+#my-work,
+body > footer {
+  ::selection {
+    background: $grey-200;
+    color: $blue-600;
+  }
+}
+
+#about-me,
+#let-s-talk {
+  ::selection {
+    background: $blue-400;
+    color: white;
+  }
+}
