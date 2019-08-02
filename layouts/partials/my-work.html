@@ -16,14 +16,16 @@
               />
             </div>
           </div>
-          <div class="mobile">
-            <div class="image">
-              <img
-                src="{{ .Params.mobileImage }}"
-                alt="A preview of the {{ .Params.title }} website at mobile width"
-              />
+          {{ if .Params.mobileImage }}
+            <div class="mobile">
+              <div class="image">
+                <img
+                  src="{{ .Params.mobileImage }}"
+                  alt="A preview of the {{ .Params.title }} website at mobile width"
+                />
+              </div>
             </div>
-          </div>
+          {{ end }}
         </figure>
         <ul class="links">
           {{ if .Params.siteLink }}

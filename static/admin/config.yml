@@ -52,7 +52,7 @@ collections:
       - { label: 'Editor', name: 'editor', widget: 'hidden', default: 'true' }
       - { label: 'Order', name: 'weight', widget: 'number', required: false }
       - { label: 'Desktop image', name: 'desktopImage', widget: 'image' }
-      - { label: 'Mobile image', name: 'mobileImage', widget: 'image' }
+      - { label: 'Mobile image', name: 'mobileImage', widget: 'image', required: false }
       - { label: 'Site link', name: 'siteLink', widget: 'string', required: false }
       - { label: 'GitHub link', name: 'githubLink', widget: 'string', required: false }
       - { label: 'Testitmonial', name: 'testimonial', widget: 'markdown', required: false }
