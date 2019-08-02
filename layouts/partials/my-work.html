@@ -29,9 +29,10 @@
         </figure>
         <ul class="links">
           {{ if .Params.siteLink }}
-          <li class="web"><a href="{{ .Params.siteLink }}">Visit the site</a></li>
-          {{ end }} {{ if .Params.githubLink }}
-          <li class="github"><a href="{{ .Params.githubLink }}">View on GitHub</a></li>
+            <li class="web"><a href="{{ .Params.siteLink }}">Visit the site</a></li>
+          {{ end }}
+          {{ if .Params.githubLink }}
+            <li class="github"><a href="{{ .Params.githubLink }}">View on GitHub</a></li>
           {{ end }}
         </ul>
         {{ if .Params.testimonial }}
