@@ -4,7 +4,7 @@ function currentYear() {
 }
 
 // Add current year to when document loaded
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
 	const elements = document.querySelectorAll('.year');
 	elements.forEach(element => {
 		element.innerHTML = currentYear();

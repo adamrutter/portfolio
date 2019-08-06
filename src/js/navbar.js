@@ -19,7 +19,6 @@ function updateNavbar() {
 		sections.forEach(section => {
 			// The relevant navbar link
 			const link = links[section.id];
-
 			// The distance the top and bottom edges of the element is from the threshold
 			const topDistance =
 				section.getBoundingClientRect().top -
@@ -59,6 +58,6 @@ function updateNavbar() {
 }
 
 // Function on run on page load
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
 	updateNavbar();
 });
