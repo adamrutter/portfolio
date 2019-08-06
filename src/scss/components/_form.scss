@@ -55,7 +55,7 @@ form {
 
         background: lighten($blue-500, 1%);
         cursor: pointer;
-        transform: translateY(-2px);
+        transform: translateY(-1px);
       }
     }
 
@@ -64,7 +64,7 @@ form {
 
       background: darken($blue-500, 2%);
       cursor: pointer;
-      transform: translateY(3px);
+      transform: translateY(2px);
       transition: background 0.05s ease-in-out, box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
     }
   }

@@ -70,7 +70,7 @@
     @media (hover: hover) {
       &:hover {
         cursor: pointer;
-        transform: translateX(-50%) translateY(-2px);
+        transform: translateX(-50%) translateY(-1px);
 
         svg {
           fill: lighten($color, 7.5%);
@@ -79,7 +79,7 @@
     }
 
     &:active {
-      transform: translateX(-50%) translateY(3px);
+      transform: translateX(-50%) translateY(2px);
 
       svg {
         fill: darken($color, 5%);
