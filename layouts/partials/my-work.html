@@ -29,12 +29,12 @@
         </figure>
         <ul class="links">
           {{ if .Params.siteLink }}
-            <li class="web active"><a href="{{ .Params.siteLink }}">Visit the site</a></li>
+            <li class="web active"><a href="{{ .Params.siteLink }}" target="_blank">Visit the site</a></li>
           {{ else }}
             <li class="web inactive">Visit the site</li>
           {{ end }}
           {{ if .Params.githubLink }}
-            <li class="github active"><a href="{{ .Params.githubLink }}">View on GitHub</a></li>
+            <li class="github active"><a href="{{ .Params.githubLink }}" target="_blank">View on GitHub</a></li>
           {{ else }}
             <li class="github inactive">View on GitHub</li>
           {{ end }}
