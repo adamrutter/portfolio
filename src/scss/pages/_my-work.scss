@@ -48,6 +48,7 @@
     padding: line-height(default);
 
     li {
+      color: $blue-300;
       padding-left: line-height(default) * 1.25;
       position: relative;
       margin: 0 line-height(default) * 0.5;
@@ -66,12 +67,20 @@
         width: line-height(default) * 0.9;
       }
 
-      &.web::before {
+      &.web.active::before {
         @include web-icon($blue-200);
       }
 
-      &.github::before {
+      &.github.active::before {
         @include github-icon($blue-200);
+      }
+
+      &.web.inactive::before {
+        @include web-icon($blue-400);
+      }
+
+      &.github.inactive::before {
+        @include github-icon($blue-400);
       }
 
       a {
