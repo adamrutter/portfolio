@@ -57,7 +57,7 @@
 		"clean:js": "rm -rf static/js/*.js",
 		"clean:img": "rm -rf static/img/*",
 		"clean:all": "npm run clean:public && npm run clean:css && npm run clean:js",
-		"build:svg": "npm run clean:svg && mkdir static/svg && npm run svgo && npm run svg-sprites",
+		"build:svg": "npm run clean:svg && mkdir -p static/svg && npm run svgo && npm run svg-sprites",
 		"build:img": "npm run clean:img && mkdir static/img && npm run imagemin:build",
 		"build:html": "html-minifier --input-dir ./public --output-dir ./public --collapse-whitespace --file-ext html",
 		"build:css": "npm run clean:css && mkdir static/css && npm run sass:build && npm run postcss:autoprefixer",
