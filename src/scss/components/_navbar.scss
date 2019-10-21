@@ -60,7 +60,7 @@
       }
 
       // Margins for various screen sizes
-      @media only screen and (min-width: 325px) {
+      @media only screen and (min-width: 310px) {
         margin: 0 (line-height(default) * 0.5);
 
         &:first-child {
@@ -99,7 +99,8 @@
       // background
       .highlight {
         height: 100%;
-        left: 50%;
+        left: calc(50% - 4px);
+        max-width: 100px;
         pointer-events: none;
         position: absolute;
         top: 100%;
@@ -107,18 +108,22 @@
         transform: translateX(-50%);
         transition: transform 0.2s ease-in-out;
         width: 100%;
-        width: calc(100% + 20px);
+        width: calc(100% + 14px);
 
         &::after {
           content: '';
           border-radius: 50%;
           height: 5px;
           position: absolute;
-          right: 4px;
+          right: -4px;
           top: -1px;
           transform: translateX(50%) translateY(-50%);
           transition: background 0.2s ease-in-out;
           width: 5px;
+        }
+
+        @media only screen and (max-width: 310px) {
+          width: 100%;          
         }
       }
 
@@ -164,7 +169,6 @@
         border-top: 2px solid $blue-300;
 
         &::after {
-          background: $blue-600;
           border: 2px solid $blue-300;
         }
       }
