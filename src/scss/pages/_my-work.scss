@@ -88,11 +88,6 @@
       a {
         color: $grey-200;
 
-        &::after {
-          background: $blue-400;
-          opacity: 0.9;
-        }
-
         &:hover {
           color: $grey-100;
         }

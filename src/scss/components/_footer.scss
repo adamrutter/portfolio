@@ -31,10 +31,6 @@ body > footer {
       color: $grey-200;
       font-weight: 500;
 
-      &::after {
-        background: $blue-400;
-      }
-
       @media (hover: hover) {
         &:hover {
           color: white;
