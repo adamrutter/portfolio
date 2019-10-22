@@ -1,12 +1,10 @@
 ---
-title: "Who I Am"
-image: "/img/pexels-photo-220453.jpeg"
-imageAlt: "A portrait of Adam"
+title: 'Who I Am'
+image: '/img/pexels-photo-220453.jpeg'
+imageAlt: 'A portrait of Adam'
 weight: 10
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Hello! I'm Adam, a Front-end Web Developer and Designer based near Chichester, West Sussex.
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+If you'd like to talk about a project, or just find out more about what I do, please do [get in contact](#let-s-talk).
