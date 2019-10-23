@@ -90,7 +90,7 @@
         left: 50%;
         position: absolute;
         top: 50%;
-        transform: translateX(-50%) translateY(-50%) skewY(-#{$skew});
+        transform: translateX(-50%) translateY(-50%);
         width: 100%;
         width: 100vw;
         z-index: -1;
