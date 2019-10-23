@@ -81,7 +81,9 @@
 
       // Background
       &::after {
-        background: darken($grey-200, 7.5%);
+        @include circuit-board-tileable($grey-400, 0.25);
+
+        background-color: darken($grey-200, 7.5%);
         content: '';
         height: 85%;
         height: calc(100% - #{line-height(default) * 5.25});
