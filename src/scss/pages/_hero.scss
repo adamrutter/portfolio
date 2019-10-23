@@ -1,5 +1,4 @@
 @import '../components/circuit-board-tileable';
-@import '../components/hero-image';
 
 #hero {
   @include circuit-board-tileable($blue-200, 0.15);
