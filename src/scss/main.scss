@@ -7,6 +7,15 @@
 @import 'variables/shadows';
 @import 'variables/misc';
 
+// Mixins
+@import 'components/circuit-board';
+@import 'components/circuit-board-tileable';
+@import 'components/bullet-icons/email';
+@import 'components/bullet-icons/github';
+@import 'components/bullet-icons/message';
+@import 'components/bullet-icons/name';
+@import 'components/bullet-icons/web';
+
 // Layouts
 @import 'layouts/content';
 
