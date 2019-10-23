@@ -14,19 +14,6 @@
   height: calc(100vh + #{line-height(default) * 2});
   position: relative;
 
-  // Solid colour background
-  &::after {
-    background: $blue-400;
-    // background: lighten($blue-500, 7.5%);
-    content: '';
-    height: 100vh;
-    left: 61.8%;
-    position: absolute;
-    top: 0;
-    transform: skewX(-#{$skew});
-    width: 50%;
-  }
-
   @media only screen and (min-width: $breakpoint) {
     flex-direction: row;
   }
