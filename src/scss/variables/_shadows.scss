@@ -1,31 +1,75 @@
-@mixin shadow-100($colour) {
-  box-shadow: 0 1px 3px change-color($colour, $alpha: 0.12), 0 1px 2px change-color($colour, $alpha: 0.24);
+@function shadow-100-a($colour) {
+  @return #{0 1px 3px change-color($colour, $alpha: 0.12)};
 }
 
-@mixin shadow-100-highlight($colour, $highlight: $colour) {
-  box-shadow: 0 1px 3px change-color($colour, $alpha: 0.12), 0 1px 2px change-color($colour, $alpha: 0.24), inset 0 2px 0 change-color($highlight, $alpha: 0.4);
+@function shadow-100-b($colour) {
+  @return #{0 1px 2px change-color($colour, $alpha: 0.24)};
+}
+
+@function shadow-300-a($colour) {
+  @return #{0 3px 6px change-color($colour, $alpha: 0.15)};
+}
+
+@function shadow-300-b($colour) {
+  @return #{0 2px 4px change-color($colour, $alpha: 0.12)};
+}
+
+@function shadow-500-a($colour) {
+  @return #{0 10px 20px change-color($colour, $alpha: 0.15)};
+}
+
+@function shadow-500-b($colour) {
+  @return #{0 3px 6px change-color($colour, $alpha: 0.12)};
+}
+
+@function shadow-700-a($colour) {
+  @return #{0 15px 25px change-color($colour, $alpha: 0.1)};
+}
+
+@function shadow-700-b($colour) {
+  @return #{0 5px 10px change-color($colour, $alpha: 0.2)};
+}
+
+@function shadow-900-a($colour) {
+  @return #{0 20px 40px change-color($colour, $alpha: 0.2)};
+}
+
+@mixin shadow-100($colour) {
+  box-shadow: shadow-100-a($colour), shadow-100-b($colour);
 }
 
 @mixin shadow-300($colour) {
-  box-shadow: 0 3px 6px change-color($colour, $alpha: 0.15), 0 2px 4px change-color($colour, $alpha: 0.12);
-}
-
-@mixin shadow-300-highlight ($colour, $highlight: $colour) {
-  box-shadow: 0 3px 6px change-color($colour, $alpha: 0.15), 0 2px 4px change-color($colour, $alpha: 0.12), inset 0 2px 0 change-color($highlight, $alpha: 0.4);
+  box-shadow: shadow-300-a($colour), shadow-300-b($colour);
 }
 
 @mixin shadow-500($colour) {
-  box-shadow: 0 10px 20px change-color($colour, $alpha: 0.15), 0 3px 6px change-color($colour, $alpha: 0.12);
-}
-
-@mixin shadow-500-highlight($colour, $highlight: $colour) {
-  box-shadow: 0 10px 20px change-color($colour, $alpha: 0.15), 0 3px 6px change-color($colour, $alpha: 0.12), inset 0 2px 0 change-color($highlight, $alpha: 0.4);
+  box-shadow: shadow-500-a($colour), shadow-500-b($colour);
 }
 
 @mixin shadow-700($colour) {
-  box-shadow: 0 15px 25px change-color($colour, $alpha: 0.1), 0 5px 10px change-color($colour, $alpha: 0.2);
+  box-shadow: shadow-700-a($colour), shadow-700-b($colour);
 }
 
 @mixin shadow-900($colour) {
-  box-shadow: 0 20px 40px change-color($colour, $alpha: 0.2);
+  box-shadow: shadow-900-a($colour);
+}
+
+@mixin drop-shadow-100($colour) {
+  filter: drop-shadow(shadow-100-a($colour)) drop-shadow(shadow-100-b($colour));
+}
+
+@mixin drop-shadow-300($colour) {
+  filter: drop-shadow(shadow-300-a($colour)) drop-shadow(shadow-300-b($colour));
+}
+
+@mixin shadow-100-highlight($colour, $highlight: $colour) {
+  box-shadow: shadow-100-a($colour), shadow-100-b($colour), inset 0 2px 0 change-color($highlight, $alpha: 0.4);
+}
+
+@mixin shadow-300-highlight ($colour, $highlight: $colour) {
+  box-shadow: shadow-300-a($colour), shadow-300-b($colour), inset 0 2px 0 change-color($highlight, $alpha: 0.4);
+}
+
+@mixin shadow-500-highlight($colour, $highlight: $colour) {
+  box-shadow: shadow-500-a($colour), shadow-500-b($colour), inset 0 2px 0 change-color($highlight, $alpha: 0.4);
 }
