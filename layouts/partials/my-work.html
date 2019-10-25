@@ -9,23 +9,23 @@
         <h3>{{ .Title }}</h3>
         <figure class="images">
           <div class="desktop">
-            <div class="image">
+            <div class="screen">
               <img
                 src="{{ .Params.desktopImage }}"
                 alt="A preview of the {{ .Params.title }} website at desktop width"
               />
             </div>
+            <svg class="frame" width="2836px" height="1634px" viewBox="0 0 2836 1634"><use xlink:href="/svg/sprite.svg#macbook"></use></svg>
           </div>
-          {{ if .Params.mobileImage }}
-            <div class="mobile">
-              <div class="image">
-                <img
-                  src="{{ .Params.mobileImage }}"
-                  alt="A preview of the {{ .Params.title }} website at mobile width"
-                />
-              </div>
+          <div class="mobile">
+            <div class="screen">
+              <img
+                src="{{ .Params.mobileImage }}"
+                alt="A preview of the {{ .Params.title }} website at mobile width"
+              />
             </div>
-          {{ end }}
+            <svg class="frame" width="982" height="1932" viewBox="0 0 982 1932"><use xlink:href="/svg/sprite.svg#iphone"></use></svg>
+          </div>
         </figure>
         <ul class="links">
           {{ if .Params.siteLink }}

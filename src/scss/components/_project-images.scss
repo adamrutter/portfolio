@@ -6,150 +6,96 @@
 	width: 100%;
 	width: calc(100% - #{line-height(default) * 1});
 
-	@media only screen and (min-width: 400px) {
+	@media only screen and (min-width: 315px) {
 		height: line-height(default) * 6;
 	}
 
-	@media only screen and (min-width: 450px) {
+	@media only screen and (min-width: 375px) {
 		height: line-height(default) * 7;
 	}
 
-	@media only screen and (min-width: 500px) {
+	@media only screen and (min-width: 415px) {
 		height: line-height(default) * 8;
 	}
 
-	@media only screen and (min-width: 550px) {
+	@media only screen and (min-width: 500px) {
 		height: line-height(default) * 9;
 	}
 
-	@media only screen and (min-width: 600px) {
+	@media only screen and (min-width: 550px) {
 		height: line-height(default) * 10;
+	}
+
+	@media only screen and (min-width: 600px) {
+		height: line-height(default) * 11;
 		margin-bottom: line-height(default) * 4;
+	}
+
+	@media only screen and (min-width: 700px) {
+		height: line-height(default) * 12;
 	}
 
 	.desktop,
 	.mobile {
-		box-sizing: border-box;
+		position: absolute;
+		width: auto;
 
-		.image {
-			height: 100%;
+		.screen {
+			background: $grey-700;
+			left: 50%;
 			overflow: hidden;
+			position: absolute;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 2;
 
 			img {
+				height: auto;
 				width: 100%;
 			}
+		}
+
+		.frame {
+			height: 100%;
+			width: auto;
 		}
 	}
 
 	.desktop {
-		@include shadow-100($grey-800);
-
-		$frame-size: 8px;
-		$stand-height: 1;
-		$stand-width: 50px;
-
-		background: $blue-700;
-		border-radius: 5px;
 		height: 100%;
-		padding: $frame-size;
-		position: relative;
-		width: 100%;
+		left: 50%;
+		transform: translateX(-50%);
 
-		&::before {
-			@include shadow-100($grey-800);
-
-			background: $blue-700;
-			bottom: -#{line-height(default) * $stand-height};
-			content: '';
-			height: line-height(default) * $stand-height;
-			left: 50%;
-			position: absolute;
-			transform: translateX(-50%) perspective(10px) rotateX(2deg)
-				translateY(-5px);
-			width: $stand-width;
+		.frame {
+			@include drop-shadow-100($grey-800);
 		}
 
-		&::after {
-			@include shadow-100($grey-800);
-
-			background: $blue-700;
-			border-radius: 5px 5px 0 0;
-			bottom: -#{line-height(default) * $stand-height};
-			content: '';
-			height: $frame-size;
-			left: 50%;
-			position: absolute;
-			transform: translateX(-50%);
-			width: $stand-width * 2;
-		}
-
-		@media only screen and (min-width: 600px) {
-			$frame-size: 10px;
-			$stand-height: 2;
-			$stand-width: 65px;
-
-			padding: $frame-size;
-			width: calc(100% - #{line-height(default)});
-
-			&::before {
-				bottom: -#{line-height(default) * $stand-height};
-				height: line-height(default) * $stand-height;
-				width: $stand-width;
-			}
-
-			&::after {
-				bottom: -#{line-height(default) * $stand-height};
-				height: $frame-size;
-				width: $stand-width * 2;
-			}
+		.screen {
+			border-radius: 2px;
+			height: 83.2%;
+			top: 47.2%;
+			width: 76.8%;
 		}
 	}
 
 	.mobile {
-		display: none;
+		bottom: 0;
+		height: 90%;
+		right: 0;
 
-		@media only screen and (min-width: 600px) {
-			@include shadow-300($grey-800);
+		.frame {
+			@include drop-shadow-300($grey-800);
+		}
 
-			$frame-size: 6px;
+		.screen {
+			border-radius: 13px;
+			height: 92.9%;
+			left: 50%;
+			width: 84.7%;
+		}
 
-			background: $blue-600;
-			border-radius: 10px;
-			bottom: -#{line-height(default) * 2};
-			display: block;
-			height: 100%;
-			padding: $frame-size;
-			position: absolute;
-			right: 0;
-			width: 130px;
-
-			&::before {
-				background: $blue-600;
-				border-radius: 0 0 5px 5px;
-				content: '';
-				height: $frame-size;
-				left: 50%;
-				position: absolute;
-				top: $frame-size;
-				transform: translateX(-50%);
-				width: 45px;
-			}
-
-			&::after {
-				background: $blue-500;
-				border-radius: 99px;
-				content: '';
-				height: $frame-size * 0.25;
-				left: 50%;
-				position: absolute;
-				top: $frame-size * 1;
-				transform: translateX(-50%);
-				width: 15px;
-			}
-
-			.image {
-				border-radius: 8px;
-			}
+		@media only screen and (max-width: 550px) {
+			display: none;
 		}
 	}
 }
