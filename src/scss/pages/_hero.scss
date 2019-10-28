@@ -67,7 +67,12 @@
 
       @media only screen and (min-width: 790px) {
         font-size: 111px;
-        line-height: line-height(default) * 4;
+        line-height: line-height(default) * 4.5;
+      }
+
+      @media only screen and (min-width: 925px) {
+        font-size: 134px;
+        line-height: line-height(default) * 5.5;
       }
 
       // .name {
@@ -88,12 +93,16 @@
       color: desaturate(lighten($blue-200, 5%), 10%);
       order: -1;
 
-      @media only screen and (min-width: 425px) {
+      @media only screen and (min-width: 400px) {
         font-size: 20px;
       }
 
-      @media only screen and (min-width: 525px) {
+      @media only screen and (min-width: 550px) {
         font-size: 24px;
+      }
+
+      @media only screen and (min-width: 925px) {
+        font-size: 28px;
       }
     }
   }
