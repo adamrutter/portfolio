@@ -20,8 +20,28 @@
     padding: 0 (line-height(default) * 3);
   }
 
-  .content {
-    height: 100%;
+  // Logo
+  .logo {
+    display: none;
+    height: 35px;
+    width: 35px;
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    svg {
+      fill: $grey-200;
+      height: 100%;
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 550px) {
+      display: inline-block;
+    }
+  }
   }
 
   // Main navigation
@@ -90,13 +110,12 @@
         display: inline-flex;
         font-weight: 400;
         height: 100%;
-        // opacity: 0.95;
+        overflow: hidden;
         text-decoration: none;
         transition: color 0.2s ease-in-out;
       }
 
-      // Active/hover indicator; currently not visible, will be made visible when the navbar has a
-      // background
+      // Active/hover indicator
       .highlight {
         height: 100%;
         left: calc(50% - 4px);
@@ -163,7 +182,6 @@
         }
       }
 
-      // Make active/hover indicator visible
       .highlight {
         border-left: 2px solid $blue-300;
         border-top: 2px solid $blue-300;
@@ -175,30 +193,7 @@
     }
   }
 
-  // Logo
-  .logo {
-    display: none;
-    height: 35px;
-    width: 35px;
-
-    a {
-      display: block;
-      height: 100%;
-      width: 100%;
-    }
-
-    svg {
-      fill: $grey-200;
-      height: 100%;
-      width: 100%;
-    }
-
-    @media only screen and (min-width: 550px) {
-      display: inline-block;
-    }
-  }
-
-  a:active {
-    outline: none;
+  .content {
+    height: 100%;
   }
 }
