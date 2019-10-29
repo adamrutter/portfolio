@@ -2,6 +2,10 @@
   background: $grey-200;
   z-index: 2;
 
+  *:focus {
+    @include outline($blue-400);
+  }
+
   // Diagonal section divider
   &::before {
     background: $grey-200;

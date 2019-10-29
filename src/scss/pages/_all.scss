@@ -8,3 +8,8 @@ body {
   color: $grey-700;
   overflow-x: hidden;
 }
+
+*:focus {
+  @include outline($blue-400);
+}
+

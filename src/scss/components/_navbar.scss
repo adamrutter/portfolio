@@ -42,6 +42,9 @@
       display: inline-block;
     }
   }
+
+  *:focus {
+    @include outline($blue-700);
   }
 
   // Main navigation
@@ -113,6 +116,24 @@
         overflow: hidden;
         text-decoration: none;
         transition: color 0.2s ease-in-out;
+
+        // Focus styles
+        &:focus {
+          outline: none !important;
+        }
+
+        &:focus::after {
+          @include outline($blue-700);
+
+          content: '';
+          height: line-height(default);
+          left: 50%;
+          padding: 2px;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+        }
       }
 
       // Active/hover indicator
@@ -171,9 +192,17 @@
     background: $blue-600;
     border-bottom: 2px solid $blue-300;
 
+    *:focus {
+      @include outline($blue-400);
+    }
+
     li {
       a {
         color: $blue-200;
+
+        &:focus::after {
+          @include outline($blue-400);
+        }
       }
 
       &.active {
