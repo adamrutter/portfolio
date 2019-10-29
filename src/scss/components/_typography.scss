@@ -18,7 +18,7 @@ footer a {
   font-weight: 700;
   position: relative;
   text-decoration: none;
-  transition: 0.1s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out, color 0.1s ease-in-out;
 
   @media (hover: hover) {
     &:hover {
