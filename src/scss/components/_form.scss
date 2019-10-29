@@ -15,14 +15,13 @@ form {
     box-sizing: border-box;
     caret-color: $grey-500;
     color: $grey-700;
-    outline: none;
     padding: line-height(default) * 0.5;
     transition: box-shadow 0.25s ease-in-out;
     width: 100%;
 
     &:focus {
       box-shadow: inset 0px -4px 0px $blue-500;
-      outline: none;
+      outline: none !important;
     }
 
     // &:focus + label,
