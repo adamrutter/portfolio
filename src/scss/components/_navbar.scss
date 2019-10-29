@@ -8,7 +8,7 @@
   padding: 0 (line-height(default) * 1);
   position: fixed;
   top: 0;
-  transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out, outline 0.2s ease-in-out, color 0.2s ease-in-out;
   width: 100%;
   z-index: 100;
 
@@ -190,7 +190,7 @@
     @include shadow-900($grey-800);
 
     background: $blue-600;
-    border-bottom: 2px solid $blue-300;
+    outline: 2px solid $blue-300; // Outline as using border-box; border causes element to jump on scroll
 
     *:focus {
       @include outline($blue-400);
