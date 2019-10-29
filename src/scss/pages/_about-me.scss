@@ -3,7 +3,7 @@
   z-index: 2;
 
   *:focus {
-    @include outline($blue-400);
+    @include outline($blue-300);
   }
 
   // Diagonal section divider
