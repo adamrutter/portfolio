@@ -21,7 +21,11 @@
     }
 
     textarea {
-      height: line-height(default) * 10;
+      height: line-height(default) * 5;
+
+      @media only screen and (min-width: 550px) {
+        height: line-height(default) * 10;
+      }
     }
 
     input[type="submit"] {
