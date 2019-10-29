@@ -5,16 +5,24 @@ projects.forEach(project => {
 	const slideToggle = project.querySelector('.hr.slide .button');
 	const slideToggleSvg = slideToggle.querySelector('svg');
 	const description = project.querySelector('.description');
-
-	slideToggle.addEventListener('click', () => {
+	function rotateButton() {
 		// Rotate the toggle arrow
 		if (description.classList.contains('hidden')) {
 			slideToggle.classList.replace('down', 'up');
 		} else if (description.classList.contains('visible')) {
 			slideToggle.classList.replace('up', 'down');
 		}
+	}
 
-		// Show/hide the description
+	slideToggle.addEventListener('click', () => {
+		rotateButton();
 		slide(description);
+	});
+
+	slideToggle.addEventListener('keyup', () => {
+		if (event.keyCode === 13) {
+			rotateButton();
+			slide(description);
+		}
 	});
 });
