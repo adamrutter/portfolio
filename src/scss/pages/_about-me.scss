@@ -6,11 +6,6 @@
     @include outline($blue-300);
   }
 
-  // Diagonal section divider
-  &::before {
-    background: $grey-200;
-  }
-
   h3 {
     color: $blue-600;
   }

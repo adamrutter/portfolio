@@ -3,11 +3,6 @@
   color: $grey-200;
   z-index: 3;
 
-  // Diagonal section divider
-  &::before {
-    background: $blue-500;
-  }
-
   h3 {
     color: $grey-200;
     line-height: floor(line-height(default) * 1.5);
