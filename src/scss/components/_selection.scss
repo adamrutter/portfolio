@@ -11,7 +11,7 @@ body > footer {
 #about-me,
 #let-s-talk {
   ::selection {
-    background: $blue-400;
-    color: white;
+    background: $blue-500;
+    color: $grey-100;
   }
 }
