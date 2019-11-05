@@ -1,10 +1,14 @@
 ---
-title: "How I Do It"
+title: 'How I Do It'
 weight: 10
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+I'm passionate about making the web faster and more efficient, so I specialise in developing static websites. I use the static site generator Hugo and my own boilerplate, which you can find [here](https://github.com/adamrutter/hugo-boilerplate). In pursuit of this goal, I also:
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+- Write semantically correct HTML5 to deliver websites that are correctly structured and accessible.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- Write CSS using the Sass preprocessor, and use tools to ensure styling is consistent across all targeted browsers.
+
+- Use JavaScript only where necessary, so my pages are as performant as possible, and transpile to make sure it works in all targeted browsers.
+
+I deploy and host websites using Netlify. Git-based continuous deployment ensures the development/deployment cycle is fast, and their global CDN guarantees pages are loaded at high speed around the world.
