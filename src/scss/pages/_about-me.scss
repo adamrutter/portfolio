@@ -174,7 +174,7 @@
   #how-i-do-it ul.columns {
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: (line-height(default) * 2) 0;
+    margin: (line-height(default) * 3) 0 (line-height(default) * 2) 0;
 
     @media only screen and (min-width: 500px) {
     }
