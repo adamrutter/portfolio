@@ -1,7 +1,9 @@
 ---
-title: "Modern, efficient web development"
-image: "/svg/development.svg"
+title: 'Modern, efficient web development'
+image: '/svg/development.svg'
 weight: 20
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+A website has to be well built if it is to be a successful product. The poorer a website performs, the less likely a user is to stay.
+
+I build using modern development practices, cutting down on unnecessary complexity, to deliver websites that are efficent, responsive and fast.
