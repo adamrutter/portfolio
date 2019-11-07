@@ -7,11 +7,12 @@ desktopImage: /img/rhythm-desktop.jpg
 mobileImage: /img/rhythm-mobile.jpg
 siteLink: 'https://adamrutter.github.io/rhythm'
 githubLink: 'https://github.com/adamrutter/rhythm'
-testimonial: ''
+testimonial: 'Rhythm is a stylesheet that aims to provide easy-to-use, responsive typographical alignment to web developers'
 testimonialAuthor: ''
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+I wanted a tool to help me improve the readablility of text, and consistently layout elements in the browser, so I made Rhythm. It had to be responsive and account for different screen sizes.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Readability of text is essential to good web design; typographic elements need to have harmonious sizing and spacing, and be grouped logically, so they can be read easily and comfortably. Rhythm accordingly takes a systematic approach to size and layout.
+
+Rhythm takes some user-defined values and uses formulas to size all type elements, at multiple breakpoints if required. It aligns these elements to a vertical grid, and provides helper functions to align any other elements to the grid.
