@@ -195,7 +195,7 @@
     @include shadow-900($grey-800);
 
     background: $blue-600;
-    height: line-height(default) * 2;
+    height: line-height(default) * 2.5;
     outline: 2px solid $blue-300; // Outline as using border-box; border causes element to jump on scroll
 
     *:focus {
