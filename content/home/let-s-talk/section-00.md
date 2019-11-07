@@ -2,6 +2,4 @@
 title: "Let's Talk"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+If you would like to talk about a potential project, or just find out more about what I do, I'd love to hear from you. You can email me at [email@address.com](mailto:email@address.com), or use the contact form below, and I'll get back to you right away!
