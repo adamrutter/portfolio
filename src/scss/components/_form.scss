@@ -39,7 +39,7 @@ form {
     @include shadow-300-highlight($grey-800, $blue-200);
 
     background: $blue-500;
-    border-radius: 99px;
+    border-radius: $border-radius;
     color: $grey-200;
     // font-weight: 700;
     max-width: 225px;
@@ -80,5 +80,9 @@ form {
 
   .container {
     position: relative;
+  }
+
+  .hidden {
+    display: none;
   }
 }

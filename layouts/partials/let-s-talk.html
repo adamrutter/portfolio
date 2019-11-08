@@ -4,7 +4,9 @@
   <div class="content">
     <h2>Let's Talk</h2>
     {{ (index $letstalk 00).Content }}
-    <form action="">
+    <form action="/sent/" data-netlify="true" name="contact" netlify-honeypot="bot-filter">
+      <input type="text" name="subject" value="Message from {{ .Site.BaseURL }}" class="hidden">
+      <input name="bot-field" type="text" class="hidden">
       <div class="top">
         <div class="name container">
           <input name="name" type="text" placeholder="Your name" required>
