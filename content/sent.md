@@ -1,5 +1,6 @@
 ---
 title: Sent
+robotsdisallow: true
 ---
 
 # Sent!
