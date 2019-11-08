@@ -26,4 +26,15 @@ footer a {
       color: $blue-700;
     }
   }
+
+  &.go-back::after {
+    @include back-icon($blue-200);
+
+    content: '';
+    height: 25px;
+    margin-left: 10px;
+    position: absolute;
+    top: 3px;
+    width: 25px;
+  }
 }

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="{{ block "description" . }}{{ .Params.Description }}{{ end }}">
     <link rel="icon" type="image/png" href="/favicon.png">
+    {{ if eq .Title "404 Page not found" }}<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">{{ end }}
     {{ if eq .RelPermalink "/" }}<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>{{ end }}
     <title>{{ .Site.Title }}</title>
     <script async src="js/main.js" async></script>

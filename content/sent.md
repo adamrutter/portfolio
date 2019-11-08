@@ -7,4 +7,4 @@ robotsdisallow: true
 
 I'll be in touch as soon as possible!
 
-<a href="{{% siteurl %}}#let-s-talk">Go back</a>
+<a class="go-back" href="{{% siteurl %}}#let-s-talk">Go back</a>
