@@ -7,12 +7,12 @@
     position: relative;
   }
 
-  i {
-    height: line-height(default) * 1.7;
+  svg {
+    height: line-height(default) * 1.75;
     margin-left: 25px;
     position: absolute;
-    top: 50%;
+    top: 54%;
     transform: translateY(-50%);
-    width: line-height(default) * 1.7;
+    width: line-height(default) * 1.75;
   }
 }
