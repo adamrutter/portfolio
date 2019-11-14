@@ -14,7 +14,7 @@
         <a href="{{ .Params.link }}" target="_blank" aria-label="View my profile on {{ .Title }}">
           <svg role="img" aria-labelledby="github-link">
             <title id="github-link">Github</title>
-            <use xlink:href="/svg/sprite.svg#{{ path.Base .Params.image | replaceRE "(\\.svg)" "" }}"></use>
+            <use xlink:href="/svg/sprite.svg#{{ path.Base .Params.image | replaceRE "(\\.svg)" "" }}" aria-hidden="true"></use>
           </svg>
         </a>
       </div>
