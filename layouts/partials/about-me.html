@@ -22,7 +22,10 @@
             <div class="heading">
               <h4>{{ .Title }}</h4>
             </div>
-            <svg><use xlink:href="/svg/sprite.svg#{{ path.Base .Params.image | replaceRE "(\\.svg)" "" }}"></use></svg>
+            <svg role="img" aria-labelledby="{{ .Title | urlize }}-image">
+              <title id="{{ .Title | urlize }}-image">{{ .Title }}</title>
+              <use xlink:href="/svg/sprite.svg#{{ path.Base .Params.image | replaceRE "(\\.svg)" "" }}"></use>
+            </svg>
             {{ .Content }}
           </li>
         {{ end }}
@@ -34,31 +37,58 @@
       {{ (index $howidoit 00).Content }}
       <ul class="columns">
       <li>
-        <svg><use xlink:href="/svg/sprite.svg#html"></use></svg>
+        <svg role="img" aria-labelledby="html-icon">
+          <title id="html-icon">HTML</title>
+          <use xlink:href="/svg/sprite.svg#html"></use>
+        </svg>
       </li>
       <li>
-        <svg><use xlink:href="/svg/sprite.svg#css"></use></svg>
+        <svg role="img" aria-labelledby="css-icon">
+          <title id="css-icon">CSS</title>
+          <use xlink:href="/svg/sprite.svg#css"></use>
+        </svg>
       </li>
       <li>
-        <svg><use xlink:href="/svg/sprite.svg#javascript"></use></svg>
+        <svg role="img" aria-labelledby="javascript-icon">
+          <title id="javascript-icon">JavaScript</title>
+          <use xlink:href="/svg/sprite.svg#javascript"></use>
+        </svg>
       </li>
       <li>
-        <svg><use xlink:href="/svg/sprite.svg#github"></use></svg>
+        <svg role="img" aria-labelledby="github-icon">
+          <title id="github-icon">Github</title>
+          <use xlink:href="/svg/sprite.svg#github"></use>
+        </svg>
       </li>
       <li>
-        <svg><use xlink:href="/svg/sprite.svg#netlify"></use></svg>
+        <svg role="img" aria-labelledby="netlify-icon">
+          <title id="netlify-icon">Netlify</title>
+          <use xlink:href="/svg/sprite.svg#netlify"></use>
+        </svg>
       </li>
       <li>
-        <svg><use xlink:href="/svg/sprite.svg#hugo"></use></svg>
+        <svg role="img" aria-labelledby="hugo-icon">
+          <title id="hugo-icon">Hugo</title>
+          <use xlink:href="/svg/sprite.svg#hugo"></use>
+        </svg>
       </li>
       <li>
-        <svg><use xlink:href="/svg/sprite.svg#sass"></use></svg>
+        <svg role="img" aria-labelledby="sass-icon">
+          <title id="sass-icon">Sass</title>
+          <use xlink:href="/svg/sprite.svg#sass"></use>
+        </svg>
       </li>
       <li>
-        <svg><use xlink:href="/svg/sprite.svg#gimp"></use></svg>
+        <svg role="img" aria-labelledby="gimp-icon">
+          <title id="gimp-icon">Gimp</title>
+          <use xlink:href="/svg/sprite.svg#gimp"></use>
+        </svg>
       </li>
       <li>
-        <svg><use xlink:href="/svg/sprite.svg#figma"></use></svg>
+        <svg role="img" aria-labelledby="figma-icon">
+          <title id="figma-icon">Figma</title>
+          <use xlink:href="/svg/sprite.svg#figma"></use>
+        </svg>
       </li>
     </ul>
     </section>
