@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' *.netlify.com 'unsafe-inline' 'unsafe-eval';
+      font-src 'self' fonts.gstatic.com;
+      style-src 'self' *.googleapis.com 'unsafe-inline';
+      img-src 'self' data:;
+    ">
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900|Barlow+Semi+Condensed:700|Titillium+Web:400,400i,700&display=swap" rel="stylesheet">
     {{ if or (.Params.robotsdisallow) (eq .Kind "404") }}<meta name="robots" content="noindex, nofollow, noarchive">
