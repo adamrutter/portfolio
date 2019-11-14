@@ -14,15 +14,23 @@ if (document.querySelector('body').classList.contains('home')) {
 				slideToggle.classList.replace('up', 'down');
 			}
 		}
+		function ariaToggle() {
+			// Check to see if the button is pressed
+			const pressed = slideToggleSvg.getAttribute('aria-pressed') === 'true';
+			// Change aria-pressed to the opposite state
+			slideToggleSvg.setAttribute('aria-pressed', !pressed);
+		}
 
 		slideToggle.addEventListener('click', () => {
 			rotateButton();
+			ariaToggle();
 			slide(description);
 		});
 
 		slideToggle.addEventListener('keyup', () => {
 			if (event.keyCode === 13) {
 				rotateButton();
+				ariaToggle();
 				slide(description);
 			}
 		});
