@@ -58,6 +58,8 @@ function updateNavbar() {
 }
 
 // Function on run on page load
-window.addEventListener('load', () => {
-	updateNavbar();
-});
+if (document.querySelector('body').classList.contains('home')) {
+	window.addEventListener('load', () => {
+		updateNavbar();
+	});
+}
