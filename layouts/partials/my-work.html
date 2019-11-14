@@ -7,12 +7,12 @@
     <section class="project" id="{{ .Title | urlize }}">
       <div class="overview">
         <h3>{{ .Title }}</h3>
-        <figure class="images">
+        <figure class="images" aria-label="A preview of the {{ .Params.title }} website">
           <div class="desktop">
             <div class="screen">
               <img
                 src="{{ .Params.desktopImage }}"
-                alt="A preview of the {{ .Params.title }} website at desktop width"
+                alt="The {{ .Params.title }} website at desktop width"
               />
             </div>
             <svg class="frame" width="2836px" height="1634px" viewBox="0 0 2836 1634"><use xlink:href="/svg/sprite.svg#macbook"></use></svg>
@@ -21,7 +21,7 @@
             <div class="screen">
               <img
                 src="{{ .Params.mobileImage }}"
-                alt="A preview of the {{ .Params.title }} website at mobile width"
+                alt="The {{ .Params.title }} website at mobile width"
               />
             </div>
             <svg class="frame" width="982" height="1932" viewBox="0 0 982 1932"><use xlink:href="/svg/sprite.svg#iphone"></use></svg>
