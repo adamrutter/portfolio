@@ -31,12 +31,12 @@
           {{ if .Params.siteLink }}
             <li class="web active"><a href="{{ .Params.siteLink }}" target="_blank">Visit the site</a></li>
           {{ else }}
-            <li class="web inactive">Visit the site</li>
+            <li class="web inactive" aria-hidden="true">Visit the site</li>
           {{ end }}
           {{ if .Params.githubLink }}
             <li class="github active"><a href="{{ .Params.githubLink }}" target="_blank">View on GitHub</a></li>
           {{ else }}
-            <li class="github inactive">View on GitHub</li>
+            <li class="github inactive" aria-hidden="true">View on GitHub</li>
           {{ end }}
         </ul>
         {{ if .Params.testimonial }}
