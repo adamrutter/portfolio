@@ -8,7 +8,7 @@
 
     <section id="{{ (index $whoiam 00).Title | urlize }}">
       <h3>{{ (index $whoiam 00).Title }}</h3>
-      <figure class="portrait" aria-label="A photo of Adam">
+      <figure class="portrait">
         <img src="{{ (index $whoiam 00).Params.image }}" alt="{{ (index $whoiam 00).Params.imageAlt }}">
       </figure>
       {{ (index $whoiam 00).Content }}
