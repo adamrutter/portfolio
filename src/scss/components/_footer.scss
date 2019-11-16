@@ -27,7 +27,7 @@ body > footer {
       white-space: nowrap;
     }
 
-    a {
+    a[href] {
       color: $grey-200;
       font-weight: 500;
 

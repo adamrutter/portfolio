@@ -76,7 +76,7 @@
         @include github-icon($blue-400);
       }
 
-      a {
+      a[href] {
         color: $grey-200;
 
         &:hover {
