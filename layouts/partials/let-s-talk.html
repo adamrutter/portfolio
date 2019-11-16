@@ -5,8 +5,8 @@
     <h2>Let's Talk</h2>
     {{ (index $letstalk 00).Content }}
     <form action="/sent/" data-netlify="true" name="contact" netlify-honeypot="bot-filter">
-      <input type="text" name="subject" value="Message from {{ strings.TrimLeft "https://" .Site.BaseURL | strings.TrimRight "/" }}" class="hidden" aria-hidden="true">
-      <input name="bot-field" type="text" class="hidden" aria-hidden="true">
+      <input hidden type="text" name="subject" value="Message from {{ strings.TrimLeft "https://" .Site.BaseURL | strings.TrimRight "/" }}" class="hidden" aria-hidden="true">
+      <input hidden name="bot-field" type="text" class="hidden" aria-hidden="true">
       <div class="top">
         <div class="name container">
           <input name="name" id="name" type="text" placeholder="Your name" required>
