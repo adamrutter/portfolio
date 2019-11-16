@@ -44,15 +44,17 @@
           {{ end }}
         </ul>
         {{ if .Params.testimonial }}
-        <figure class="testimonial">
+        <figure class="testimonial" {{ if not .Params.testimonialAuthor }}aria-label="A quote"{{ end }}>
           <blockquote>
             <p>{{ .Params.testimonial }}</p>
           </blockquote>
-          <figcaption>{{ .Params.testimonialAuthor }}</figcaption>
+          {{ if .Params.testimonialAuthor }}
+            <figcaption>{{ .Params.testimonialAuthor }}</figcaption>
+          {{ end }}
         </figure>
         {{ end }}
       </div>
-      <div class="description hidden">
+      <div class="description hidden" aria-hidden="true">
         {{ .Content }}
       </div>
       {{ partial "hr-slide.html" . }}
