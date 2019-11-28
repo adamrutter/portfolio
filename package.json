@@ -35,8 +35,8 @@
 		"uglify-js": "^3.6.0"
 	},
 	"scripts": {
-		"stylelint": "stylelint src/**/*.scss",
-		"stylelint:fix": "stylelint src/**/*.scss --fix",
+		"stylelint": "stylelint **/*.scss",
+		"stylelint:fix": "stylelint **/*.scss --fix",
 		"eslint": "eslint src/**/*.js",
 		"eslint:fix": "eslint src/**/*.js --fix",
 		"svgo": "svgo -f src/svg/ -o static/svg",
