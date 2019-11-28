@@ -87,9 +87,16 @@
   }
 
   .description {
-    height: 0;
     overflow: hidden;
     transition: height 0.35s ease-in-out;
+
+    &.hidden {
+      height: 0;
+    }
+
+    &.visible {
+      height: 100%;
+    }
 
     p:last-child {
       margin-bottom: line-height(default) * 3;
