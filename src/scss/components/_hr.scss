@@ -51,7 +51,7 @@
       height: calc(100% + #{$stroke-width});
       left: 50%;
       position: absolute;
-      top: calc(-50% - #{$stroke-width) * 1.5});
+      top: calc(-50% - #{$stroke-width * 1.5});
       transform: translateX(-50%) scaleY(0.5774) rotate(45deg);
       width: calc(100% + #{$stroke-width});
       z-index: -1;
