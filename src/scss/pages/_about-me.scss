@@ -180,9 +180,6 @@
     justify-content: space-around;
     margin: (line-height(default) * 3) 0 (line-height(default) * 2) 0;
 
-    @media only screen and (min-width: 500px) {
-    }
-
     li {
       height: line-height(default) * 2;
       margin: line-height(default) * 0.5;
