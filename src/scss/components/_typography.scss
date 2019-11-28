@@ -39,6 +39,19 @@ footer a[href] {
   }
 }
 
+[class="404-page-not-found"],
+body.sent {
+  a[href] {
+    color: $grey-200;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $grey-100;
+      }
+    }
+  }
+}
+
 a:not([href]) {
   pointer-events: none;
 }
