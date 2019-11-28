@@ -11,7 +11,7 @@
   <div class="external-links">
     {{ range $links }}
       <div class="{{ .Title | urlize }}">
-        <a href="{{ .Params.link }}" target="_blank" aria-label="View my profile on {{ .Title }}">
+        <a href="{{ .Params.link }}" target="_blank" rel="noopener" aria-label="View my profile on {{ .Title }}">
           <svg height="35" role="img" aria-labelledby="github-link">
             <title id="github-link">Github</title>
             <use xlink:href="/svg/sprite.svg#{{ path.Base .Params.image | replaceRE "(\\.svg)" "" }}" aria-hidden="true"></use>
