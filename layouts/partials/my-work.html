@@ -56,10 +56,15 @@
         </figure>
         {{ end }}
       </div>
-      <div class="description hidden" aria-hidden="true" aria-live="polite" role="alert">
+      <div class="description hidden if-js" aria-hidden="true" aria-live="polite" role="alert">
         {{ .Content }}
       </div>
       {{ partial "hr-slide.html" . }}
+      <noscript>
+        <div class="description visible">
+          {{ .Content }}
+        </div>
+      </noscript>
     </section>
     {{ end }}
   </div>
