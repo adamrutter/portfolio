@@ -5,10 +5,11 @@
     <base href="{{ .Permalink }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      script-src 'self' *.netlify.com 'unsafe-inline' 'unsafe-eval';
-      font-src 'self' fonts.gstatic.com; style-src 'self' *.googleapis.com 'unsafe-inline';
-      img-src 'self' data:;
+      default-src 'self' {{ .Site.BaseURL }};
+      script-src 'self' {{ .Site.BaseURL }} *.netlify.com 'unsafe-inline' 'unsafe-eval';
+      font-src 'self' {{ .Site.BaseURL }} fonts.gstatic.com;
+      style-src 'self' {{ .Site.BaseURL }} *.googleapis.com 'unsafe-inline';
+      img-src 'self' {{ .Site.BaseURL }} data:;
     ">
     <meta name="description" content="{{ block "description" . }}{{ .Params.Description }}{{ end }}">
     <link rel="stylesheet" href="/css/main.css">
