@@ -24,6 +24,7 @@ collections:
         fields:
           - { label: 'Heading', name: 'title', widget: 'string' }
           - { label: 'Order', name: 'weight', widget: 'number' }
+          - { label: 'Image', name: 'image', widget: 'image' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - label: 'What I Do (2)'
         name: 'what-i-do-2'
@@ -31,6 +32,7 @@ collections:
         fields:
           - { label: 'Heading', name: 'title', widget: 'string' }
           - { label: 'Order', name: 'weight', widget: 'number' }
+          - { label: 'Image', name: 'image', widget: 'image' }
           - { label: 'Content', name: 'body', widget: 'markdown' }
       - label: 'How I Do It'
         name: 'how-i-do-it'
