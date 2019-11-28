@@ -7,51 +7,59 @@
     <section class="project" id="{{ .Title | urlize }}">
       <div class="overview">
         <h3>{{ .Title }}</h3>
-        <figure class="images">
+        <figure class="images" aria-label="A preview of the {{ .Params.title }} website">
           <div class="desktop">
             <div class="screen">
               <img
+                width="600"
                 src="{{ .Params.desktopImage }}"
-                alt="A preview of the {{ .Params.title }} website at desktop width"
+                alt="The {{ .Params.title }} website at desktop width"
               />
             </div>
-            <svg class="frame" width="2836px" height="1634px" viewBox="0 0 2836 1634"><use xlink:href="/svg/sprite.svg#macbook"></use></svg>
+            <svg height="0" class="frame"viewBox="0 0 2836 1634" aria-hidden="true"><use xlink:href="/svg/sprite.svg#macbook"></use></svg>
           </div>
           <div class="mobile">
             <div class="screen">
               <img
+                width="200"
                 src="{{ .Params.mobileImage }}"
-                alt="A preview of the {{ .Params.title }} website at mobile width"
+                alt="The {{ .Params.title }} website at mobile width"
               />
             </div>
-            <svg class="frame" width="982" height="1932" viewBox="0 0 982 1932"><use xlink:href="/svg/sprite.svg#iphone"></use></svg>
+            <svg height="0" class="frame" viewBox="0 0 982 1932" aria-hidden="true"><use xlink:href="/svg/sprite.svg#iphone"></use></svg>
           </div>
         </figure>
         <ul class="links">
           {{ if .Params.siteLink }}
             <li class="web active"><a href="{{ .Params.siteLink }}" target="_blank">Visit the site</a></li>
           {{ else }}
-            <li class="web inactive">Visit the site</li>
+            <li class="web inactive">
+              <a tabindex="-1" aria-label="Site link not available">Visit the site</a>
+            </li>
           {{ end }}
           {{ if .Params.githubLink }}
             <li class="github active"><a href="{{ .Params.githubLink }}" target="_blank">View on GitHub</a></li>
           {{ else }}
-            <li class="github inactive">View on GitHub</li>
+            <li class="github inactive">
+              <a tabindex="-1" aria-label="Github repository not available">View on GitHub</a>
+            </li>
           {{ end }}
         </ul>
         {{ if .Params.testimonial }}
-        <figure class="testimonial">
+        <figure class="testimonial" {{ if not .Params.testimonialAuthor }}aria-label="A quote"{{ end }}>
           <blockquote>
             <p>{{ .Params.testimonial }}</p>
           </blockquote>
-          <figcaption>{{ .Params.testimonialAuthor }}</figcaption>
+          {{ if .Params.testimonialAuthor }}
+            <figcaption>{{ .Params.testimonialAuthor }}</figcaption>
+          {{ end }}
         </figure>
         {{ end }}
       </div>
-      <div class="description hidden">
+      <div class="description hidden" aria-hidden="true" aria-live="polite" role="alert">
         {{ .Content }}
       </div>
-      {{ partial "hr-slide.html" }}
+      {{ partial "hr-slide.html" . }}
     </section>
     {{ end }}
   </div>

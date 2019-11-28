@@ -4,15 +4,15 @@
   height: calc(var(--vh, 1vh) * 100);
 
   h1 {
-    position: relative;
+    display: inline-block;
   }
 
   svg {
+    display: inline-block;
     height: line-height(default) * 1.75;
     margin-left: 25px;
-    position: absolute;
-    top: 54%;
-    transform: translateY(-50%);
+    position: relative;
+    top: 2px;
     width: line-height(default) * 1.75;
   }
 }
