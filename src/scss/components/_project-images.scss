@@ -76,6 +76,20 @@
       top: 47.2%;
       width: 76.8%;
     }
+
+    // IE 10 and above
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      width: 100%;
+
+      .frame {
+        display: none;
+      }
+
+      .screen {
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 
   .mobile {
@@ -95,6 +109,11 @@
     }
 
     @media only screen and (max-width: 550px) {
+      display: none;
+    }
+
+    // IE 10 and above
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       display: none;
     }
   }
