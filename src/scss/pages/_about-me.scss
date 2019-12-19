@@ -118,6 +118,11 @@
         padding: line-height(default);
         padding-top: 0;
 
+        // IE 10 and above; flex: 1 breaks height
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          flex: 1 1 auto;
+        }
+
         // Deal with non-collapsing margins within flexbox
         &:first-child {
           margin-bottom: line-height(default) * 0.5;
