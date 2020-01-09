@@ -16,7 +16,7 @@ testimonialAuthor: Jane Doe
 
 Suzanne Hill School of Dance wanted a website that would help them attract new students, and provide helpful information to members.
 
-They wanted the friendly atmosphere of the school to be a pronounced part of the website. It was important for me the website made the correct first impression, and the friendliness of the school was gotten across right away.
+As they wanted the friendly atmosphere of the school to be a pronounced part of the website, it was important for me the website made the correct first impression, and the friendliness of the school was gotten across right away.
 
 In pursuit of creating the right first impression, I used a warm, happy image for the homepage banner and ensured the first section of text addressed the friendly, supportive nature of the school.
 

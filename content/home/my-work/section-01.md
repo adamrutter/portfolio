@@ -12,8 +12,9 @@ testimonial: >-
   typographical alignment to web developers
 testimonialAuthor: ''
 ---
-I wanted a tool to help me improve the readablility of text, and consistently layout elements in the browser, so I made Rhythm. It had to be responsive and account for different screen sizes.
 
-Readability of text is essential to good web design; typographic elements need to have harmonious sizing and spacing, and be grouped logically, so they can be read easily and comfortably. I accordingly took a systematic approach to size and layout.
+Readability of text is essential to good web design; typographic elements need to have harmonious sizing and spacing, and be grouped logically, so they can be read easily and comfortably.
 
-Rhythm takes some user-defined values and uses formulas to size all type elements, at multiple breakpoints if required. It aligns these elements to ensure correct typographical flow, and provides functions to help align any other elements too.
+I wanted a tool to help me with this, so I made Rhythm. Rhythm systematically sets vertical rhythm and sizing of text, and consistently lays out elements in the browser. It is responsive and accounts for different screen sizes.
+
+It takes some user-defined values and uses formulas to size all type elements, at multiple breakpoints if required. It aligns these elements to ensure correct typographical flow, and provides functions to help align any other elements too.
