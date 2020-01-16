@@ -1,101 +1,120 @@
 .project .images {
-	height: line-height(default) * 5;
-	margin: (line-height(default) * 2) auto (line-height(default) * 3) auto;
-	padding: 0;
-	position: relative;
-	width: 100%;
-	width: calc(100% - #{line-height(default) * 1});
+  height: line-height(default) * 5;
+  margin: (line-height(default) * 2) auto (line-height(default) * 3) auto;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  width: calc(100% - #{line-height(default) * 1});
 
-	@media only screen and (min-width: 315px) {
-		height: line-height(default) * 6;
-	}
+  @media only screen and (min-width: 315px) {
+    height: line-height(default) * 6;
+  }
 
-	@media only screen and (min-width: 375px) {
-		height: line-height(default) * 7;
-	}
+  @media only screen and (min-width: 375px) {
+    height: line-height(default) * 7;
+  }
 
-	@media only screen and (min-width: 415px) {
-		height: line-height(default) * 8;
-	}
+  @media only screen and (min-width: 415px) {
+    height: line-height(default) * 8;
+  }
 
-	@media only screen and (min-width: 500px) {
-		height: line-height(default) * 9;
-	}
+  @media only screen and (min-width: 500px) {
+    height: line-height(default) * 9;
+  }
 
-	@media only screen and (min-width: 550px) {
-		height: line-height(default) * 10;
-	}
+  @media only screen and (min-width: 550px) {
+    height: line-height(default) * 10;
+  }
 
-	@media only screen and (min-width: 600px) {
-		height: line-height(default) * 11;
-		margin-bottom: line-height(default) * 4;
-	}
+  @media only screen and (min-width: 600px) {
+    height: line-height(default) * 11;
+    margin-bottom: line-height(default) * 4;
+  }
 
-	@media only screen and (min-width: 700px) {
-		height: line-height(default) * 12;
-	}
+  @media only screen and (min-width: 700px) {
+    height: line-height(default) * 12;
+  }
 
-	.desktop,
-	.mobile {
-		position: absolute;
-		width: auto;
+  .desktop,
+  .mobile {
+    position: absolute;
+    width: auto;
 
-		.screen {
-			background: $grey-700;
-			left: 50%;
-			overflow: hidden;
-			position: absolute;
-			top: 50%;
-			transform: translateX(-50%) translateY(-50%);
-			z-index: 2;
+    .screen {
+      background: $grey-700;
+      left: 50%;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 2;
 
-			img {
-				height: auto;
-				width: 100%;
-			}
-		}
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
 
-		.frame {
-			height: 100%;
-			width: auto;
-		}
-	}
+    .frame {
+      height: 100%;
+      width: auto;
+    }
+  }
 
-	.desktop {
-		height: 100%;
-		left: 50%;
-		transform: translateX(-50%);
+  .desktop {
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 
-		.frame {
-			@include drop-shadow-100($grey-800);
-		}
+    .frame {
+      @include drop-shadow-100($grey-800);
+    }
 
-		.screen {
-			border-radius: 2px;
-			height: 83.2%;
-			top: 47.2%;
-			width: 76.8%;
-		}
-	}
+    .screen {
+      border-radius: 2px;
+      height: 83.2%;
+      top: 47.2%;
+      width: 76.8%;
+    }
 
-	.mobile {
-		bottom: 0;
-		height: 90%;
-		right: 0;
+    // IE 10 and above
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      width: 100%;
 
-		.frame {
-			@include drop-shadow-300($grey-800);
-		}
+      .frame {
+        display: none;
+      }
 
-		.screen {
-			border-radius: 13px;
-			height: 92.9%;
-			left: 50%;
-			width: 84.7%;
-		}
+      .screen {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 
-		@media only screen and (max-width: 550px) {
-			display: none;
-		}
-	}
+  .mobile {
+    bottom: 0;
+    height: 90%;
+    right: 0;
+
+    .frame {
+      @include drop-shadow-300($grey-800);
+    }
+
+    .screen {
+      border-radius: 13px;
+      height: 92.9%;
+      left: 50%;
+      width: 84.7%;
+    }
+
+    @media only screen and (max-width: 550px) {
+      display: none;
+    }
+
+    // IE 10 and above
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      display: none;
+    }
+  }
 }
