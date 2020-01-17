@@ -1,0 +1,7 @@
+<li>
+  <div class="heading">
+    <h4>{{ .title }}</h4>
+  </div>
+  {{ partial "elements/svg-from-sprite-accessible.html" (dict "image" (path.Base .context.Params.image | replaceRE "(\\.svg)" "") "title" .title) }}
+  {{ .context.Content }}
+</li>

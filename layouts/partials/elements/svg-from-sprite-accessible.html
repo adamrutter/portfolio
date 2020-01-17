@@ -1,0 +1,4 @@
+<svg role="img" aria-labelledby="{{ .title | urlize }}-image">
+  <title id="{{ .title | urlize }}-image">{{ .title }}</title>
+  <use xlink:href="/svg/sprite.svg#{{ .image}}" aria-hidden="true"></use>
+</svg>
