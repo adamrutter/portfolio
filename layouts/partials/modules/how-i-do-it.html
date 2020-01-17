@@ -1,0 +1,7 @@
+{{ $howidoit := (.Site.GetPage "/home/about-me/how-i-do-it").Resources.Match "section*" }}
+
+<section id="{{ (index $howidoit 00).Title | urlize }}">
+  <h3>{{ (index $howidoit 00).Title }}</h3>
+  {{ (index $howidoit 00).Content }}
+  {{ partial "components/how-i-do-it-icons.html" }}
+</section>
