@@ -1,0 +1,6 @@
+{{ $letstalk := (.Site.GetPage "/home/lets-talk").Resources.Match "section*" }}
+
+<div class="content">
+  {{ (index $letstalk 00).Content }}
+  {{ partial "components/contact-form.html" . }}
+</div>

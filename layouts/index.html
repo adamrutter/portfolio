@@ -21,11 +21,15 @@
       </div>
       {{ partial "elements/section-border.html" . }}
     </section>
-    {{ partial "lets-talk.html" . }}
+    <section id="lets-talk">
+      {{ partial "elements/section-heading.html" (dict "title" "Let's Talk") }}
+      {{ partial "modules/lets-talk.html" . }}
+      {{ partial "elements/section-border.html" . }}
+    </section>
   </main>
 
   <footer>
-    {{ partial "footer.html" . }}
+    {{ partial "modules/footer.html" . }}
   </footer>
 
 {{ end }}

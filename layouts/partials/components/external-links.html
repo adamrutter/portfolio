@@ -1,0 +1,8 @@
+{{ $links := (.Site.GetPage "/footer/external-links").Resources.Match "section*" }}
+
+<div class="external-links">
+  {{ range $links }}
+    {{ $label := print "View my profile on " .Title  }}
+    {{ partial "elements/external-link-icon.html" (dict "label" $label "context" .) }}
+  {{ end }}
+</div>
