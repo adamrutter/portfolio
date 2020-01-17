@@ -2,9 +2,13 @@
 
   {{ partial "modules/navbar.html" . }}
   {{ partial "modules/hero.html" . }}
-
   <main>
-    {{ partial "about-me.html" . }}
+    <section id="about-me">
+      {{ partial "elements/section-heading.html" (dict "title" "About Me") }}
+      <div class="content">
+        {{ partial "modules/who-i-am.html" . }}
+      </div>
+    </section>
     {{ partial "my-work.html" . }}
     {{ partial "lets-talk.html" . }}
   </main>
