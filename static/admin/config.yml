@@ -61,13 +61,13 @@ collections:
       - { label: 'Testimonial author', name: 'testimonialAuthor', widget: 'string', required: false }
       - { label: 'Project description', name: 'body', widget: 'markdown'}
   - label: 'Let''s Talk'
-    name: 'let-s-talk'
+    name: 'lets-talk'
     editor:
       preview: false
     files:
       - label: 'Let''s Talk'
-        name: 'let-s-talk'
-        file: 'content/home/let-s-talk/section-00.md'
+        name: 'lets-talk'
+        file: 'content/home/lets-talk/section-00.md'
         fields:
           - { label: 'Heading', name: 'title', widget: 'string' }
           - { label: 'Content', name: 'body', widget: 'markdown' }

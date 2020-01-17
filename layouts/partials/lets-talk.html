@@ -1,6 +1,6 @@
-{{ $letstalk := (.Site.GetPage "/home/let-s-talk").Resources.Match "section*" }}
+{{ $letstalk := (.Site.GetPage "/home/lets-talk").Resources.Match "section*" }}
 
-<section id="let-s-talk">
+<section id="lets-talk">
   <div class="content">
     <h2>Let's Talk</h2>
     {{ (index $letstalk 00).Content }}

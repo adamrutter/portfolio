@@ -5,7 +5,7 @@ function updateNavbar() {
 	const links = {
 		'about-me': document.querySelector('.navbar li.about-me'),
 		'my-work': document.querySelector('.navbar li.my-work'),
-		'let-s-talk': document.querySelector('.navbar li.let-s-talk')
+		'lets-talk': document.querySelector('.navbar li.lets-talk')
 	};
 
 	// Change navbar item classes based on scroll position
