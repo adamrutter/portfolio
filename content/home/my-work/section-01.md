@@ -5,7 +5,7 @@ editor: true
 weight: 20
 desktopImage: /img/rhythm-desktop.jpg
 mobileImage: /img/rhythm-mobile.jpg
-siteLink: 'https://adamrutter.github.io/rhythm'
+webLink: 'https://adamrutter.github.io/rhythm'
 githubLink: 'https://github.com/adamrutter/rhythm'
 testimonial: >-
   Rhythm is a stylesheet that aims to provide easy-to-use, responsive

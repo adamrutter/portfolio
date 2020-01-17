@@ -1,0 +1,8 @@
+<figure class="testimonial" {{ if not .context.Params.testimonialAuthor }}aria-label="A quote"{{ end }}>
+  <blockquote>
+    <p>{{ .context.Params.testimonial }}</p>
+  </blockquote>
+  {{ if .context.Params.testimonialAuthor }}
+    <figcaption>{{ .context.Params.testimonialAuthor }}</figcaption>
+  {{ end }}
+</figure>

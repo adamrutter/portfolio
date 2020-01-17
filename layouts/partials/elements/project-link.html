@@ -1,0 +1,8 @@
+{{ $link := index .context.Params (print .type "link") }}
+{{ if $link }}
+  <li class="{{ .type }} active"><a href="{{ $link }}" target="_blank" rel="noopener">{{ .text }}</a></li>
+{{ else }}
+  <li class="{{ .type }} inactive">
+    <a tabindex="-1" aria-label="{{ .type }} link not available">{{ .text }}</a>
+  </li>
+{{ end }}

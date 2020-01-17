@@ -12,7 +12,15 @@
       </div>
       {{ partial "elements/section-border.html" . }}
     </section>
-    {{ partial "my-work.html" . }}
+    <section id="my-work">
+      {{ partial "elements/section-heading.html" (dict "title" "My Work") }}
+      <div class="content">
+        {{ range (.Site.GetPage "/home/my-work").Resources.Match "section*" }}
+          {{ partial "modules/project.html" (dict "context" .) }}
+        {{ end }}
+      </div>
+      {{ partial "elements/section-border.html" . }}
+    </section>
     {{ partial "lets-talk.html" . }}
   </main>
 
