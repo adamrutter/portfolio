@@ -44,10 +44,6 @@
       li {
         a {
           color: $blue-200;
-
-          &:focus::after {
-            @include outline($blue-400);
-          }
         }
 
         &.active {

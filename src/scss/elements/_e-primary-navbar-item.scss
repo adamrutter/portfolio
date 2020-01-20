@@ -59,7 +59,7 @@
       }
 
       &:focus::after {
-        @include outline($blue-400);
+        @include outline($blue-300);
 
         content: '';
         height: line-height(default);
