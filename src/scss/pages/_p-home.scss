@@ -1,6 +1,7 @@
 body.home {
   @include l-home-section();
+  @include e-section-heading();
   @include m-navbar();
   @include m-hero();
-  @include e-section-heading();
+  @include m-who-i-am();
 }
