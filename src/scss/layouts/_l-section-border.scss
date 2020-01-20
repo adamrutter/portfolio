@@ -1,0 +1,6 @@
+@mixin l-section-border() {
+  .section-border {
+    height: line-height(default) * 9;
+    width: 100vw;
+  }
+}

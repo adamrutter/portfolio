@@ -1,7 +1,21 @@
 body.home {
   @include l-home-section();
+  @include l-section-border();
   @include e-section-heading();
   @include m-navbar();
   @include m-hero();
   @include m-who-i-am();
+
+  #about-me,
+  #lets-talk {
+    .section-border {
+      @include circuit-board-border($grey-400, 0.5);
+    }
+  }
+
+  #my-work {
+    .section-border {
+      @include circuit-board-border($blue-200, 0.3);
+    }
+  }
 }
