@@ -17,6 +17,11 @@
       }
     }
   }
+
+  ::selection {
+    background: $blue-500;
+    color: $grey-100;
+  }
 }
 
 .background-dark {
@@ -37,5 +42,10 @@
         color: $grey-100;
       }
     }
+  }
+
+  ::selection {
+    background: $grey-200;
+    color: $blue-600;
   }
 }
