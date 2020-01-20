@@ -1,0 +1,23 @@
+@mixin m-footer() {
+  footer {
+    @include c-secondary-nav();
+    @include c-external-links();
+    @include e-footer-copyright();
+
+    background: $blue-500;
+    color: $grey-200;
+    position: relative;
+
+    padding: (line-height(default) * 6) 0;
+    text-align: center;
+    z-index: 5;
+
+    &::before {
+      background: $blue-500;
+    }
+
+    nav {
+      
+    }
+  }
+}

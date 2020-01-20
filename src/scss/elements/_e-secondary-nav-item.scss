@@ -1,0 +1,12 @@
+@mixin e-secondary-nav-item() {
+  .secondary-nav-item {
+    li {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    a[href] {
+      font-weight: 500;
+    }
+  }
+}

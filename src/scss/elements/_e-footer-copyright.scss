@@ -1,0 +1,9 @@
+@mixin e-footer-copyright() {
+  .copyright {
+    font-size: 16px;
+
+    .year {
+      font-size: inherit;
+    }
+  }
+}

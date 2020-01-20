@@ -1,5 +1,5 @@
 {{ $image := path.Base .context.Params.image | replaceRE "(\\.svg)" "" }}
-<div class="{{ .context.Title | urlize }}">
+<div class="{{ .context.Title | urlize }} external-link-icon">
   <a href="{{ .context.Params.link }}" target="_blank" rel="noopener" aria-label="{{ .label }}">
     {{ partial "elements/svg-from-sprite-accessible.html" (dict "title" "Github icon" "image" $image)}}
   </a>

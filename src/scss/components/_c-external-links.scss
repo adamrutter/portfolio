@@ -1,0 +1,11 @@
+@mixin c-external-links() {
+  .external-links {
+    @include e-external-link-icon();
+
+    margin: (line-height(default) * 3) 0;
+
+    div {
+      display: inline-block;
+    }
+  }
+}

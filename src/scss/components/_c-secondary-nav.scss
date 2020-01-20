@@ -1,0 +1,15 @@
+@mixin c-secondary-nav() {
+  .secondary-nav {
+    @include e-secondary-nav-item();
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      margin: line-height(default) auto;
+      margin-top: 0;
+      max-width: 333px;
+      padding: 0;
+    }
+  }
+}
