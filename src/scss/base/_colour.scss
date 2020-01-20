@@ -7,7 +7,15 @@
   }
 
   a {
-    color: $blue-500;
+    --highlight-color: #{transparentize($blue-300, 0.4)};
+
+    color: $blue-600;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $blue-700;
+      }
+    }
   }
 }
 
@@ -20,6 +28,14 @@
   }
 
   a {
+    --highlight-color: #{transparentize($blue-300, 0.4)};
+
     color: $grey-100;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $grey-100;
+      }
+    }
   }
 }
