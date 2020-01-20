@@ -2,5 +2,73 @@
   .navbar {
     @include e-logo();
     @include c-primary-nav();
+
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: line-height(default) * 3;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 (line-height(default) * 1);
+    position: fixed;
+    top: 0;
+    transition:
+      box-shadow 0.2s ease-in-out,
+      background 0.2s ease-in-out,
+      outline 0.2s ease-in-out,
+      color 0.2s ease-in-out,
+      height 0.2s ease-in-out;
+    width: 100%;
+    z-index: 100;
+
+    @media only screen and (min-width: 550px) {
+      padding: 0 (line-height(default) * 2);
+    }
+
+    @media only screen and (min-width: 750px) {
+      padding: 0 (line-height(default) * 3);
+    }
+
+    // Styles for navbar once scrolled
+    &.background {
+      @include shadow-900($grey-800);
+
+      background: $blue-600;
+      height: line-height(default) * 2.5;
+      outline: 2px solid $blue-300; // Outline as using border-box; border causes element to jump on scroll
+
+      *:focus {
+        @include outline($blue-400);
+      }
+
+      @media only screen and (min-width: 550px) {
+        height: line-height(default) * 3;
+      }
+
+      li {
+        a {
+          color: $blue-200;
+
+          &:focus::after {
+            @include outline($blue-400);
+          }
+        }
+
+        &.active {
+          a {
+            color: $grey-200;
+          }
+        }
+
+        .highlight {
+          border-left: 2px solid $blue-300;
+          border-top: 2px solid $blue-300;
+
+          &::after {
+            border: 2px solid $blue-300;
+          }
+        }
+      }
+    }
   }
 }
