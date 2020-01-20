@@ -2,7 +2,7 @@
   {{ partial "modules/navbar.html" . }}
   {{ partial "modules/hero.html" . }}
   <main>
-    <section id="about-me" class="home-section">
+    <section id="about-me" class="home-section background-light">
       {{ partial "elements/section-heading.html" (dict "title" "About Me") }}
       <div class="content">
         {{ partial "modules/who-i-am.html" . }}
@@ -11,7 +11,7 @@
       </div>
       {{ partial "elements/section-border.html" . }}
     </section>
-    <section id="my-work" class="home-section">
+    <section id="my-work" class="home-section background-dark">
       {{ partial "elements/section-heading.html" (dict "title" "My Work") }}
       <div class="content">
         {{ range (.Site.GetPage "/home/my-work").Resources.Match "section*" }}
@@ -20,7 +20,7 @@
       </div>
       {{ partial "elements/section-border.html" . }}
     </section>
-    <section id="lets-talk" class="home-section">
+    <section id="lets-talk" class="home-section background-light">
       {{ partial "elements/section-heading.html" (dict "title" "Let's Talk") }}
       {{ partial "modules/lets-talk.html" . }}
       {{ partial "elements/section-border.html" . }}

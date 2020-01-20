@@ -1,0 +1,25 @@
+.background-light {
+  background: $grey-200;
+  color: $grey-700;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $blue-600;
+  }
+
+  a {
+    color: $blue-500;
+  }
+}
+
+.background-dark {
+  background: $blue-500;
+  color: $grey-200;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $grey-200;
+  }
+
+  a {
+    color: $grey-100;
+  }
+}

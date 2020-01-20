@@ -37,10 +37,6 @@
       height: line-height(default) * 2.5;
       outline: 2px solid $blue-300; // Outline as using border-box; border causes element to jump on scroll
 
-      *:focus {
-        @include outline($blue-400);
-      }
-
       @media only screen and (min-width: 550px) {
         height: line-height(default) * 3;
       }
