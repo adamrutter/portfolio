@@ -1,5 +1,6 @@
 @mixin m-navbar() {
   .navbar {
     @include e-logo();
+    @include c-primary-nav();
   }
 }
