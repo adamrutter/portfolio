@@ -9,3 +9,14 @@
 // Base
 @import '../../node_modules/normalize.css/normalize';
 @import 'base/rhythm';
+
+// Elements
+@import 'elements/logo';
+
+// Components
+
+// Modules
+@import 'modules/navbar';
+
+// Pages
+@import 'pages/home';

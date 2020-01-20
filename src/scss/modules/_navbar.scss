@@ -1,0 +1,5 @@
+@mixin m-navbar() {
+  .navbar {
+    @include e-logo();
+  }
+}

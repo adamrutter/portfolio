@@ -1,0 +1,23 @@
+@mixin e-logo() {
+  .logo {
+    display: none;
+    height: 35px;
+    width: 35px;
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    svg {
+      fill: $grey-200;
+      height: 100%;
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 550px) {
+      display: inline-block;
+    }
+  }
+}
