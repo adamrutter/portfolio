@@ -1,0 +1,3 @@
+@mixin outline($colour) {
+  outline: 2px dashed $colour;
+}

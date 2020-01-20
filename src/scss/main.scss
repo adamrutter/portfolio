@@ -7,6 +7,9 @@
 @import 'settings/shadows';
 @import 'settings/misc';
 
+// Tools
+@import 'tools/mixins';
+
 // Mixins
 @import 'components/circuit-board';
 @import 'components/circuit-board-tileable';
