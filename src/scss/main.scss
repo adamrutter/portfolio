@@ -2,10 +2,10 @@
 @import '../../node_modules/normalize.css/normalize';
 @import 'rhythm';
 
-// Variables
-@import 'variables/colours';
-@import 'variables/shadows';
-@import 'variables/misc';
+// Setttings
+@import 'settings/colours';
+@import 'settings/shadows';
+@import 'settings/misc';
 
 // Mixins
 @import 'components/circuit-board';
