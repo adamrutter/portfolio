@@ -1,7 +1,3 @@
-// Normalize/Rhythm
-@import '../../node_modules/normalize.css/normalize';
-@import 'rhythm';
-
 // Setttings
 @import 'settings/colours';
 @import 'settings/shadows';
@@ -9,6 +5,10 @@
 
 // Tools
 @import 'tools/mixins';
+
+// Base
+@import '../../node_modules/normalize.css/normalize';
+@import 'base/rhythm';
 
 // Mixins
 @import 'components/circuit-board';
