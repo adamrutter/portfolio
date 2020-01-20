@@ -11,10 +11,15 @@
 @import 'base/rhythm';
 @import 'base/typography';
 
+// Layouts
+@import 'layouts/home-section';
+@import 'layouts/content';
+
 // Elements
 @import 'elements/e-logo';
 @import 'elements/e-primary-navbar-item';
 @import 'elements/e-hero-headline';
+@import 'elements/e-section-heading';
 
 // Components
 @import 'components/c-primary-nav';

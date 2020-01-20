@@ -1,4 +1,6 @@
 body.home {
+  @include l-home-section();
   @include m-navbar();
   @include m-hero();
+  @include e-section-heading();
 }
