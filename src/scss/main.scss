@@ -9,36 +9,3 @@
 // Base
 @import '../../node_modules/normalize.css/normalize';
 @import 'base/rhythm';
-
-// Mixins
-@import 'components/circuit-board';
-@import 'components/circuit-board-tileable';
-@import 'components/bullet-icons/email';
-@import 'components/bullet-icons/github';
-@import 'components/bullet-icons/message';
-@import 'components/bullet-icons/name';
-@import 'components/bullet-icons/web';
-@import 'components/bullet-icons/back';
-
-// Layouts
-@import 'layouts/content';
-
-// Components
-@import 'components/typography';
-@import 'components/section';
-@import 'components/footer';
-@import 'components/project-images';
-@import 'components/hr';
-@import 'components/form';
-@import 'components/navbar';
-@import 'components/selection';
-
-// Pages
-@import 'pages/all';
-@import 'pages/about-me';
-@import 'pages/my-work';
-@import 'pages/lets-talk';
-@import 'pages/hero';
-@import 'pages/single';
-@import 'pages/sent';
-@import 'pages/404';
