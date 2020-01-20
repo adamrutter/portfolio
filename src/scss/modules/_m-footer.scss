@@ -4,20 +4,9 @@
     @include c-external-links();
     @include e-footer-copyright();
 
-    background: $blue-500;
-    color: $grey-200;
-    position: relative;
-
     padding: (line-height(default) * 6) 0;
+    position: relative;
     text-align: center;
     z-index: 5;
-
-    &::before {
-      background: $blue-500;
-    }
-
-    nav {
-      
-    }
   }
 }
