@@ -12,7 +12,7 @@ function updateNavbar() {
 	function updateClass() {
 		// Values we need so we can move the threshold from the top of the viewport
 		const navbarHeight = navbar.offsetHeight;
-		const circuitBoardHeight = document.querySelector('.circuit-board')
+		const circuitBoardHeight = document.querySelector('.section-border')
 			.offsetHeight;
 		const sectionOverflow = 29;
 
