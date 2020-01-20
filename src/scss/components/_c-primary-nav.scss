@@ -1,5 +1,18 @@
 @mixin c-primary-nav() {
   .prim-nav {
     @include e-primary-navbar-item();
+
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+
+    @media only screen and (min-width: 550px) {
+      width: auto;
+    }
   }
 }
