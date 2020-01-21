@@ -1,0 +1,13 @@
+@mixin c-testimonial() {
+  .testimonial {
+    @include e-testimonial-quote();
+    @include e-testimonial-author();
+
+    margin-top: 0;
+    padding: 0 (line-height(default) * 0.5);
+
+    @media only screen and (min-width: 500px) {
+      padding: 0 (line-height(default) * 1);
+    }
+  }
+}

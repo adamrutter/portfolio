@@ -1,0 +1,29 @@
+@mixin e-project-image-mobile() {
+  .mobile {
+    @include l-project-image();
+
+    bottom: 0;
+    height: 90%;
+    right: 0;
+
+    .frame {
+      @include drop-shadow-300($grey-800);
+    }
+
+    .screen {
+      border-radius: 13px;
+      height: 92.9%;
+      left: 50%;
+      width: 84.7%;
+    }
+
+    @media only screen and (max-width: 550px) {
+      display: none;
+    }
+
+    // IE 10 and above
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      display: none;
+    }
+  }
+}

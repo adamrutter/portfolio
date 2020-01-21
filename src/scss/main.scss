@@ -17,10 +17,13 @@
 @import 'layouts/l-home-section';
 @import 'layouts/l-content';
 @import 'layouts/l-section-border';
+@import 'layouts/l-project-image';
 
 // SVG
 @import 'svg/circuit-board-border';
 @import 'svg/circuit-board-tileable';
+@import 'svg/icon-github';
+@import 'svg/icon-web';
 
 // Elements
 @import 'elements/e-logo';
@@ -34,6 +37,12 @@
 @import 'elements/e-card-heading';
 @import 'elements/e-card-image';
 @import 'elements/e-how-i-do-it-icon';
+@import 'elements/e-project-image-desktop';
+@import 'elements/e-project-image-mobile';
+@import 'elements/e-testimonial-quote';
+@import 'elements/e-testimonial-author';
+@import 'elements/e-project-link';
+@import 'elements/e-project-divider';
 
 // Components
 @import 'components/c-primary-nav';
@@ -41,6 +50,10 @@
 @import 'components/c-external-links';
 @import 'components/c-what-i-do-card';
 @import 'components/c-how-i-do-it-icons';
+@import 'components/c-project-images';
+@import 'components/c-testimonial';
+@import 'components/c-project-links';
+@import 'components/c-project-description';
 
 // Modules
 @import 'modules/m-navbar';
@@ -48,6 +61,7 @@
 @import 'modules/m-who-i-am';
 @import 'modules/m-what-i-do';
 @import 'modules/m-how-i-do-it';
+@import 'modules/m-project';
 @import 'modules/m-footer';
 
 // Pages

@@ -1,0 +1,13 @@
+@mixin c-project-links() {
+  .project-links {
+    @include e-project-link();
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: -#{line-height(default)};
+    margin-bottom: line-height(default) * 2;
+    padding: line-height(default);
+  }
+}
