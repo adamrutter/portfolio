@@ -6,6 +6,7 @@ body.home {
   @include m-hero();
   @include m-who-i-am();
   @include m-what-i-do();
+  @include m-how-i-do-it();
   @include m-footer();
 
   #about-me,
