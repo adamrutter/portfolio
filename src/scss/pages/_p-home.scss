@@ -8,6 +8,7 @@ body.home {
   @include m-what-i-do();
   @include m-how-i-do-it();
   @include m-project();
+  @include m-lets-talk();
   @include m-footer();
 
   #about-me,

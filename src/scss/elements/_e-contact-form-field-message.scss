@@ -1,0 +1,23 @@
+@mixin e-contact-form-field-message() {
+  .form-field.container.message {
+    @include e-contact-form-field();
+
+    textarea {
+      height: line-height(default) * 5;
+
+      @media only screen and (min-width: 550px) {
+        height: line-height(default) * 10;
+      }
+    }
+
+    &::before {
+      @include message-icon($grey-500);
+    }
+
+    &:focus-within {
+      &::before {
+        @include message-icon($blue-500);
+      }
+    }
+  }
+}

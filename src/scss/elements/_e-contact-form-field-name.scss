@@ -1,0 +1,15 @@
+@mixin e-contact-form-field-name() {
+  .form-field.container.name {
+    @include e-contact-form-field();
+
+    &::before {
+      @include name-icon($grey-500);
+    }
+
+    &:focus-within {
+      &::before {
+        @include name-icon($blue-500);
+      }
+    }
+  }
+}

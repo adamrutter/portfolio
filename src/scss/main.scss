@@ -24,6 +24,9 @@
 @import 'svg/circuit-board-tileable';
 @import 'svg/icon-github';
 @import 'svg/icon-web';
+@import 'svg/icon-name';
+@import 'svg/icon-email';
+@import 'svg/icon-message';
 
 // Elements
 @import 'elements/e-logo';
@@ -43,6 +46,11 @@
 @import 'elements/e-testimonial-author';
 @import 'elements/e-project-link';
 @import 'elements/e-project-divider';
+@import 'elements/e-contact-form-field';
+@import 'elements/e-contact-form-field-name';
+@import 'elements/e-contact-form-field-email';
+@import 'elements/e-contact-form-field-message';
+@import 'elements/e-contact-form-submit';
 
 // Components
 @import 'components/c-primary-nav';
@@ -54,6 +62,7 @@
 @import 'components/c-testimonial';
 @import 'components/c-project-links';
 @import 'components/c-project-description';
+@import 'components/c-contact-form';
 
 // Modules
 @import 'modules/m-navbar';
@@ -62,6 +71,7 @@
 @import 'modules/m-what-i-do';
 @import 'modules/m-how-i-do-it';
 @import 'modules/m-project';
+@import 'modules/m-lets-talk';
 @import 'modules/m-footer';
 
 // Pages
