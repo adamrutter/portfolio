@@ -1,8 +1,0 @@
-@mixin message-icon($color) {
-  $color-rgb: "rgb(" + round(red($color)) + "%2C" + round(green($color)) + "%2C" + round(blue($color)) + ")";
-
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%3Cpath%20fill%3D%22#{$color-rgb}%22%20d%3D%22M9%2C22A1%2C1%200%200%2C1%208%2C21V18H4A2%2C2%200%200%2C1%202%2C16V4C2%2C2.89%202.9%2C2%204%2C2H20A2%2C2%200%200%2C1%2022%2C4V16A2%2C2%200%200%2C1%2020%2C18H13.9L10.2%2C21.71C10%2C21.9%209.75%2C22%209.5%2C22V22H9M5%2C5V7H19V5H5M5%2C9V11H13V9H5M5%2C13V15H15V13H5Z%22%20%2F%3E%0A%3C%2Fsvg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
