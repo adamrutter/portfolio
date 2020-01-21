@@ -31,7 +31,7 @@
     </noscript>
     <script src="/js/main.js" defer></script>
   </head>
-  <body class="{{ urlize .Title }} {{ if in .Title "404" }}background-dark{{ end }}">
+  <body class="{{ urlize .Title }} {{ if or (in .Title "404") (in .Title "Sent") }}background-dark{{ end }}">
     {{ block "body" . }}
     {{ end }}
   </body>
