@@ -31,32 +31,8 @@ a {
     font-weight: 500;
     pointer-events: none;
   }
-
-  // &.go-back::after {
-  //   @include back-icon($blue-200);
-  //
-  //   content: '';
-  //   height: 25px;
-  //   margin-left: 10px;
-  //   position: absolute;
-  //   top: 3px;
-  //   width: 25px;
-  // }
 }
 
-// [class="404-page-not-found"],
-// body.sent {
-//   a[href] {
-//     color: $grey-200;
-//
-//     @media (hover: hover) {
-//       &:hover {
-//         color: $grey-100;
-//       }
-//     }
-//   }
-// }
-//
 // a:not([href]) {
 //   pointer-events: none;
 // }

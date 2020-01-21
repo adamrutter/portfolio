@@ -18,6 +18,7 @@
 @import 'layouts/l-content';
 @import 'layouts/l-section-border';
 @import 'layouts/l-project-image';
+@import 'layouts/l-basic-page';
 
 // SVG
 @import 'svg/circuit-board-border';
@@ -27,6 +28,7 @@
 @import 'svg/icon-name';
 @import 'svg/icon-email';
 @import 'svg/icon-message';
+@import 'svg/icon-back';
 
 // Elements
 @import 'elements/e-logo';
@@ -51,6 +53,9 @@
 @import 'elements/e-contact-form-field-email';
 @import 'elements/e-contact-form-field-message';
 @import 'elements/e-contact-form-submit';
+@import 'elements/e-go-back-link';
+@import 'elements/e-inline-icon-large';
+@import 'elements/e-circuit-board-border-fullscreen';
 
 // Components
 @import 'components/c-primary-nav';
@@ -76,3 +81,4 @@
 
 // Pages
 @import 'pages/p-home';
+@import 'pages/p-404';

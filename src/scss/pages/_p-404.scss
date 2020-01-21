@@ -1,0 +1,10 @@
+body[class~="404-page-not-found"] {
+  @include l-basic-page();
+  @include e-inline-icon-large();
+  @include e-go-back-link();
+  @include e-circuit-board-border-fullscreen();
+
+  h1 {
+    display: inline-block;
+  }
+}
