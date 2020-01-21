@@ -1,5 +1,6 @@
 @mixin m-hero() {
   #hero {
+    @include circuit-board-tileable($blue-200, 0.15);
     @include e-hero-headline();
 
     display: flex;
