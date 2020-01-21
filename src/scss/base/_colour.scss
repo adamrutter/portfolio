@@ -16,6 +16,10 @@
         color: $blue-700;
       }
     }
+
+    &:not([href]) {
+      color: $grey-400;
+    }
   }
 
   ::selection {
@@ -41,6 +45,10 @@
       &:hover {
         color: $grey-100;
       }
+    }
+
+    &:not([href]) {
+      color: $blue-400;
     }
   }
 
