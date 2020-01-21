@@ -1,0 +1,50 @@
+@mixin c-what-i-do-card() {
+  .what-i-do-card {
+    @include shadow-500($grey-800);
+    @include e-card-heading()
+    @include e-card-image();
+
+    background: $grey-200;
+    border-radius: $border-radius;
+    color: $grey-600;
+    flex: 1;
+    margin: line-height(default) * 1;
+    max-width: 400px;
+    overflow: hidden;
+    padding: line-height(default);
+    padding-top: 0;
+
+    // IE 10 and above; flex: 1 breaks height
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      flex: 1 1 auto;
+    }
+
+    // Deal with non-collapsing margins within flexbox
+    &:first-child {
+      margin-bottom: line-height(default) * 0.5;
+
+      @media only screen and (min-width: 800px) {
+        margin-bottom: line-height(default) * 1;
+        margin-right: line-height(default) * 0.5;
+      }
+
+      @media only screen and (min-width: 925px) {
+        margin-right: line-height(default) * 1;
+      }
+    }
+
+    // Deal with non-collapsing margins within flexbox
+    &:last-child {
+      margin-top: line-height(default) * 0.5;
+
+      @media only screen and (min-width: 800px) {
+        margin-top: line-height(default) * 1;
+        margin-left: line-height(default) * 0.5;
+      }
+
+      @media only screen and (min-width: 925px) {
+        margin-left: line-height(default) * 1;
+      }
+    }
+  }
+}

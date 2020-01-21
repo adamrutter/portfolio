@@ -2,7 +2,7 @@
 
 <section id="what-i-do">
   <h3>{{ path.Base (index $whatido 00).Dir | title | replaceRE "(-)" " " }}</h3>
-  <ul class="columns">
+  <ul class="card-container">
     {{ range $whatido }}
       {{ partial "components/what-i-do-card.html" (dict "title" .Title "context" .) }}
     {{ end }}

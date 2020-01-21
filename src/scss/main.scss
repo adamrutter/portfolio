@@ -31,16 +31,20 @@
 @import 'elements/e-secondary-nav-item';
 @import 'elements/e-external-link-icon';
 @import 'elements/e-floated-image';
+@import 'elements/e-card-heading';
+@import 'elements/e-card-image';
 
 // Components
 @import 'components/c-primary-nav';
 @import 'components/c-secondary-nav';
 @import 'components/c-external-links';
+@import 'components/c-what-i-do-card';
 
 // Modules
 @import 'modules/m-navbar';
 @import 'modules/m-hero';
 @import 'modules/m-who-i-am';
+@import 'modules/m-what-i-do';
 @import 'modules/m-footer';
 
 // Pages
