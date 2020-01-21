@@ -11,6 +11,10 @@
     margin: (line-height(default) * 1) 0 (line-height(default) * 6) 0;
     position: relative;
 
+    @media only screen and (min-width: 700px) {
+      margin-bottom: line-height(default) * 7;
+    }
+
     .end {
       border: $stroke-width solid $color-alpha;
       border-radius: 50%;
