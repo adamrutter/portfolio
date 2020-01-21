@@ -1,0 +1,18 @@
+// Links in the navbar are supposed to change colour once the page has been scrolled, but they don't
+// due to '_e-primary-navbar-item' not being able to access the parent container's '.background'
+// class. This ensures the links are the right colour
+body.home nav.navbar.background li.prim-nav-item {
+  a {
+    color: $blue-200;
+
+    &:hover {
+      color: $grey-100;
+    }
+  }
+
+  &.active {
+    a {
+      color: $grey-100;
+    }
+  }
+}
