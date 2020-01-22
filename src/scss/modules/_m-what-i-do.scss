@@ -1,0 +1,56 @@
+@mixin m-what-i-do() {
+  #what-i-do {
+    @include c-what-i-do-card();
+
+    margin: (line-height(default) * 4) 0;
+
+    @media only screen and (min-width: 700px) {
+      margin: (line-height(default) * 6) 0;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .card-container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      left: 50%;
+      list-style: none;
+      max-width: 900px;
+      padding: 0;
+      position: relative;
+      top: 0;
+      transform: translateX(-50%);
+      width: 100vw;
+
+      @media only screen and (min-width: 800px) {
+        align-items: stretch;
+        flex-direction: row;
+      }
+
+      // Background
+      &::after {
+        @include circuit-board-tileable($grey-400, 0.25);
+
+        background-color: darken($grey-200, 7.5%);
+        content: '';
+        height: 85%;
+        height: calc(100% - #{line-height(default) * 5.25});
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 100%;
+        width: 100vw;
+        z-index: -1;
+
+        @media only screen and (min-width: 800px) {
+          height: 75%;
+        }
+      }
+    }
+  }
+}

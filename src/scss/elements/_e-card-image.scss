@@ -1,0 +1,8 @@
+@mixin e-card-image() {
+  .card-image {
+    display: flex; // For alignment
+    height: line-height(default) * 5;
+    margin: (line-height(default) * 2) 0;
+    width: 100%;
+  }
+}

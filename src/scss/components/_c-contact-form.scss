@@ -1,0 +1,37 @@
+@mixin c-contact-form() {
+  form[name="contact"] {
+    @include e-contact-form-field-name();
+    @include e-contact-form-field-email();
+    @include e-contact-form-field-message();
+    @include e-contact-form-submit();
+
+    margin: (line-height(default) * 3) 0 (line-height(default) * 3) 0;
+
+    * {
+      line-height: line-height(default);
+    }
+
+    // Alignment/wrapping
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+
+      .name,
+      .email {
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 600px) {
+        flex-wrap: nowrap;
+
+        .name {
+          margin-right: line-height(default) * 0.5;
+        }
+
+        .email {
+          margin-left: line-height(default) * 0.5;
+        }
+      }
+    }
+  }
+}

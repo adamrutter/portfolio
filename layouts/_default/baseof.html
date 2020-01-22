@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <base href="{{ .Permalink }}">
+    <!-- <base href="{{ .Permalink }}"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self' {{ .Site.BaseURL }};
@@ -31,7 +31,7 @@
     </noscript>
     <script src="/js/main.js" defer></script>
   </head>
-  <body class="{{ urlize .Title }}">
+  <body class="{{ urlize .Title }} {{ if or (in .Title "404") (in .Title "Sent") }}background-dark{{ end }}">
     {{ block "body" . }}
     {{ end }}
   </body>

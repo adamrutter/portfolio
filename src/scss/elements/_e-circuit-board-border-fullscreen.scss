@@ -1,0 +1,11 @@
+@mixin e-circuit-board-border-fullscreen() {
+  &::after {
+    @include circuit-board-border($blue-400, 0.6);
+
+    bottom: 0;
+    content: '';
+    height: line-height(default) * 6;
+    position: absolute;
+    width: 100vw;
+  }
+}

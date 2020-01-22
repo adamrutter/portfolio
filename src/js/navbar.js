@@ -5,14 +5,14 @@ function updateNavbar() {
 	const links = {
 		'about-me': document.querySelector('.navbar li.about-me'),
 		'my-work': document.querySelector('.navbar li.my-work'),
-		'let-s-talk': document.querySelector('.navbar li.let-s-talk')
+		'lets-talk': document.querySelector('.navbar li.lets-talk')
 	};
 
 	// Change navbar item classes based on scroll position
 	function updateClass() {
 		// Values we need so we can move the threshold from the top of the viewport
 		const navbarHeight = navbar.offsetHeight;
-		const circuitBoardHeight = document.querySelector('.circuit-board')
+		const circuitBoardHeight = document.querySelector('.section-border')
 			.offsetHeight;
 		const sectionOverflow = 29;
 

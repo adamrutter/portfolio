@@ -5,7 +5,7 @@ if (document.querySelector('body').classList.contains('home')) {
 	projects.forEach(project => {
 		const slideToggle = project.querySelector('.hr.slide .button');
 		const slideToggleSvg = slideToggle.querySelector('svg');
-		const description = project.querySelector('.description');
+		const description = project.querySelector('.project-description');
 		function rotateButton() {
 			// Rotate the toggle arrow
 			if (description.classList.contains('hidden')) {

@@ -5,7 +5,7 @@ editor: true
 weight: 10
 desktopImage: /img/suzanne-hill-dance-desktop.jpg
 mobileImage: /img/suzanne-hill-dance-mobile.jpg
-siteLink: 'https://suzannehilldance.co.uk/'
+webLink: 'https://suzannehilldance.co.uk/'
 githubLink: ''
 testimonial: ''
 testimonialAuthor: Jane Doe

@@ -1,0 +1,21 @@
+@mixin e-external-link-icon() {
+  .external-link-icon {
+    a {
+      display: inline-block;
+      height: line-height(default) * 1.5;
+      margin: 0 (line-height(default) * 0.5);
+      width: line-height(default) * 1.5;
+
+      &::after {
+        background: none;
+      }
+    }
+
+    svg {
+      fill: $grey-200;
+      height: 100%;
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+}

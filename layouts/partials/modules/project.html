@@ -1,0 +1,12 @@
+<section class="project" id="{{ .context.Title | urlize }}">
+  <div class="overview">
+    <h3>{{ .context.Title }}</h3>
+    {{ partial "components/project-images.html" (dict "context" .context) }}
+    {{ partial "components/project-links.html" (dict "context" .context) }}
+    {{ if .context.Params.testimonial }}
+      {{ partial "components/testimonial.html" (dict "context" .context) }}
+    {{ end }}
+  </div>
+  {{ partial "elements/project-description.html" (dict "context" .context) }}
+  {{ partial "elements/project-divider.html" . }}
+</section>

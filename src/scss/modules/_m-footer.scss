@@ -1,0 +1,12 @@
+@mixin m-footer() {
+  footer {
+    @include c-secondary-nav();
+    @include c-external-links();
+    @include e-footer-copyright();
+
+    padding: (line-height(default) * 6) 0;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+  }
+}

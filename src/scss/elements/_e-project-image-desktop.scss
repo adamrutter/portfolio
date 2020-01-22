@@ -1,0 +1,34 @@
+@mixin e-project-image-desktop() {
+  .desktop {
+    @include l-project-image();
+
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .frame {
+      @include drop-shadow-100($grey-800);
+    }
+
+    .screen {
+      border-radius: 2px;
+      height: 83.2%;
+      top: 47.2%;
+      width: 76.8%;
+    }
+
+    // IE 10 and above
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      width: 100%;
+
+      .frame {
+        display: none;
+      }
+
+      .screen {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.background-light {
+  background: $grey-200;
+  color: $grey-700;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $blue-600;
+  }
+
+  a {
+    --highlight-color: #{transparentize($blue-300, 0.4)};
+
+    color: $blue-600;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $blue-700;
+      }
+    }
+
+    &:not([href]) {
+      color: $grey-400;
+    }
+  }
+
+  ::selection {
+    background: $blue-500;
+    color: $grey-100;
+  }
+}
+
+.background-dark {
+  background: $blue-500;
+  color: $grey-200;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $grey-200;
+  }
+
+  a {
+    --highlight-color: #{transparentize($blue-300, 0.4)};
+
+    color: $grey-100;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $grey-100;
+      }
+    }
+
+    &:not([href]) {
+      color: $blue-400;
+    }
+  }
+
+  ::selection {
+    background: $grey-200;
+    color: $blue-600;
+  }
+}

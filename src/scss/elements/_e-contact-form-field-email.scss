@@ -1,0 +1,14 @@
+@mixin e-contact-form-field-email() {
+  .form-field.container.email {
+    @include e-contact-form-field();
+
+    &::before {
+      @include email-icon($grey-500);
+    }
+    &:focus-within {
+      &::before {
+        @include email-icon($blue-500);
+      }
+    }
+  }
+}

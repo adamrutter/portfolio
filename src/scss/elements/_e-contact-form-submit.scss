@@ -1,0 +1,45 @@
+@mixin e-contact-form-submit() {
+  .submit.container {
+    display: flex;
+    justify-content: center;
+
+    input[type="submit"] {
+      @include shadow-300-highlight($grey-800, $blue-200);
+
+      background: $blue-500;
+      border: none;
+      border-radius: $border-radius;
+      color: $grey-200;
+      margin: #{line-height(default) * 1} 0 0 0;
+      max-width: 225px;
+      min-width: 150px;
+      padding: line-height(default) 0;
+      text-align: center;
+      transition: background 0.1s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+      width: 75%;
+
+      @media (hover: hover) {
+        &:hover {
+          @include shadow-500-highlight($grey-800, $blue-200);
+
+          background: lighten($blue-500, 1%);
+          cursor: pointer;
+          transform: translateY(-1px);
+        }
+      }
+
+      &:active {
+        @include shadow-100-highlight($grey-800, $blue-200);
+
+        background: darken($blue-500, 2%);
+        cursor: pointer;
+        transform: translateY(2px);
+        transition: background 0.05s ease-in-out, box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+      }
+
+      &:focus {
+        @include outline($blue-300);
+      }
+    }
+  }
+}

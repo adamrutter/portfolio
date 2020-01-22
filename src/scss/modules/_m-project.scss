@@ -1,0 +1,17 @@
+@mixin m-project() {
+  .project {
+    @include c-project-images();
+    @include c-testimonial();
+    @include c-project-links();
+    @include c-project-description();
+    @include e-project-divider();
+
+    h3 {
+      line-height: floor(line-height(default) * 1.5);
+
+      @media only screen and (min-width: 559px) {
+        line-height: line-height(default) * 2;
+      }
+    }
+  }
+}

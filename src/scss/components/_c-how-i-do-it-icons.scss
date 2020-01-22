@@ -1,0 +1,12 @@
+@mixin c-how-i-do-it-icons() {
+  .icons-container {
+    @include e-how-i-do-it-icon();
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    margin: (line-height(default) * 3) 0 (line-height(default) * 2) 0;
+    padding: 0;
+  }
+}

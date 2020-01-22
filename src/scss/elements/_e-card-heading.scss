@@ -1,0 +1,13 @@
+@mixin e-card-heading() {
+  .heading {
+    margin: 0 -#{line-height(default)};
+    padding: line-height(default);
+
+    h4 {
+      font-size: 22px;
+      line-height: line-height(default) * 1;
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@mixin e-floated-image() {
+  figure.float {
+    @include shadow-100($grey-800);
+
+    border-radius: $border-radius;
+    height: 0;
+    margin: (line-height(default) * 2) 0;
+    overflow: hidden;
+    padding: 0 0 100% 0;
+    width: 100%;
+
+    @media only screen and (min-width: 475px) {
+      float: right;
+      margin: 81px 0 (line-height(default) * 1) (line-height(default) * 1); // Top margin has to be same as the adjacent heading
+      padding: 0 0 38.2% 0;
+      width: 38.2%;
+    }
+
+    @media only screen and (min-width: 600px) {
+      margin: 81px 0 (line-height(default) * 2) (line-height(default) * 2); // Top margin has to be same as the adjacent heading
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

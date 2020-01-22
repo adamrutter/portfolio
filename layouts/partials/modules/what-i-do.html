@@ -1,0 +1,10 @@
+{{ $whatido := (.Site.GetPage "/home/about-me/what-i-do").Resources.Match "section*" }}
+
+<section id="what-i-do">
+  <h3>{{ path.Base (index $whatido 00).Dir | title | replaceRE "(-)" " " }}</h3>
+  <ul class="card-container">
+    {{ range $whatido }}
+      {{ partial "components/what-i-do-card.html" (dict "title" .Title "context" .) }}
+    {{ end }}
+  </ul>
+</section>

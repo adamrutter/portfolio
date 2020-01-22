@@ -1,0 +1,37 @@
+@mixin e-project-link() {
+  li.link {
+    padding-left: line-height(default) * 1.25;
+    position: relative;
+    margin: 0 line-height(default) * 0.5;
+    white-space: nowrap;
+
+    &::before {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      height: 90%;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: line-height(default) * 0.9;
+    }
+
+    &.web.active::before {
+      @include web-icon($blue-200);
+    }
+
+    &.github.active::before {
+      @include github-icon($blue-200);
+    }
+
+    &.web.inactive::before {
+      @include web-icon($blue-400);
+    }
+
+    &.github.inactive::before {
+      @include github-icon($blue-400);
+    }
+  }
+}

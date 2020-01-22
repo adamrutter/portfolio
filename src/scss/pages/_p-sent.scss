@@ -1,0 +1,9 @@
+body.sent {
+  @include l-basic-page();
+  @include e-go-back-link();
+  @include e-circuit-board-border-fullscreen();
+
+  h1 {
+    display: inline-block;
+  }
+}

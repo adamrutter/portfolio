@@ -1,0 +1,10 @@
+@mixin e-inline-icon-large() {
+  .inline-icon-large {
+    display: inline-block;
+    height: line-height(default) * 1.75;
+    margin-left: 25px;
+    position: relative;
+    top: 2px;
+    width: line-height(default) * 1.75;
+  }
+}

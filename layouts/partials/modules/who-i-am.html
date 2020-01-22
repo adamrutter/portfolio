@@ -1,0 +1,7 @@
+{{ $whoiam := (.Site.GetPage "/home/about-me/who-i-am").Resources.Match "section*" }}
+
+<section id="{{ (index $whoiam 00).Title | urlize }}">
+  <h3>{{ (index $whoiam 00).Title }}</h3>
+  {{ partial "elements/image-float.html" (dict "class" "portrait" "src" (index $whoiam 00).Params.image "alt" (index $whoiam 00).Params.imageAlt) }}
+  {{ (index $whoiam 00).Content }}
+</section>

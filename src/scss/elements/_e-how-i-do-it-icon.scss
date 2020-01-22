@@ -1,0 +1,18 @@
+@mixin e-how-i-do-it-icon() {
+  li {
+    height: line-height(default) * 2;
+    margin: line-height(default) * 0.5;
+    padding: 0;
+    width: line-height(default) * 2;
+
+    @media only screen and (min-width: 500px) {
+      margin: line-height(default);
+    }
+
+    svg {
+      fill: $blue-400;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

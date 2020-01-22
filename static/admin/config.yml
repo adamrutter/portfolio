@@ -55,19 +55,19 @@ collections:
       - { label: 'Order', name: 'weight', widget: 'number', required: false }
       - { label: 'Desktop image', name: 'desktopImage', widget: 'image' }
       - { label: 'Mobile image', name: 'mobileImage', widget: 'image', required: false }
-      - { label: 'Site link', name: 'siteLink', widget: 'string', required: false }
+      - { label: 'Web link', name: 'webLink', widget: 'string', required: false }
       - { label: 'GitHub link', name: 'githubLink', widget: 'string', required: false }
       - { label: 'Testitmonial', name: 'testimonial', widget: 'markdown', required: false }
       - { label: 'Testimonial author', name: 'testimonialAuthor', widget: 'string', required: false }
       - { label: 'Project description', name: 'body', widget: 'markdown'}
   - label: 'Let''s Talk'
-    name: 'let-s-talk'
+    name: 'lets-talk'
     editor:
       preview: false
     files:
       - label: 'Let''s Talk'
-        name: 'let-s-talk'
-        file: 'content/home/let-s-talk/section-00.md'
+        name: 'lets-talk'
+        file: 'content/home/lets-talk/section-00.md'
         fields:
           - { label: 'Heading', name: 'title', widget: 'string' }
           - { label: 'Content', name: 'body', widget: 'markdown' }

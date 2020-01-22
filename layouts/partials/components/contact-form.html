@@ -1,0 +1,10 @@
+<form action="/sent/" data-netlify="true" name="contact" data-netlify-honeypot="bot-filter">
+  {{ partial "elements/contact-form-hidden-subject-field.html" . }}
+  {{ partial "elements/contact-form-hidden-bot-field.html" . }}
+  <div class="top">
+    {{ partial "elements/contact-form-name.html" .}}
+    {{ partial "elements/contact-form-email.html" .}}
+  </div>
+  {{ partial "elements/contact-form-message.html" .}}
+  {{ partial "elements/contact-form-submit.html" .}}
+</form>
