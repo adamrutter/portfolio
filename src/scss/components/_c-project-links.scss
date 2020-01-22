@@ -7,7 +7,11 @@
     justify-content: center;
     list-style: none;
     margin: -#{line-height(default)};
-    margin-bottom: line-height(default) * 2;
+    margin-bottom: line-height(default) * 1;
     padding: line-height(default);
+  }
+
+  @media only screen and (min-width: 418px) {
+    margin-bottom: line-height(default) * 2;
   }
 }
