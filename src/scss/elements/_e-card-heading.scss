@@ -1,7 +1,14 @@
 @mixin e-card-heading() {
   .heading {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     margin: 0 -#{line-height(default)};
     padding: line-height(default);
+
+    @media only screen and (min-width: 800px) {
+      min-height: 54px;
+    }
 
     h4 {
       font-size: 22px;
