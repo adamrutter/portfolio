@@ -3,7 +3,7 @@ title: 'How I Do It'
 weight: 10
 ---
 
-I specialise in developing fast, efficient, static websites. I use the static site generator Hugo and my own boilerplate, which you can find [here](https://github.com/adamrutter/hugo-boilerplate). In pursuit of this goal, I also:
+I specialise in developing fast, efficient, static websites. I use the static site generator Hugo and [my own boilerplate](https://github.com/adamrutter/hugo-boilerplate). In pursuit of this goal, I also:
 
 - Write semantically correct HTML5 to deliver websites that are correctly structured and accessible.
 
