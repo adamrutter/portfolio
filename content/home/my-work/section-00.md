@@ -15,7 +15,7 @@ Suzanne Hill School of Dance wanted a website that would help them attract new s
 
 As they wanted the friendly atmosphere of the school to be a pronounced part of the website, it was important for me the website made the correct first impression, and the friendliness of the school was gotten across right away.
 
-In pursuit of creating the right first impression, I used a warm, happy image for the homepage banner and ensured the first section of text addressed the friendly, supportive nature of the school.
+In pursuit of creating the right first impression, I used a cheerful image of the school's students for the homepage banner and ensured the first section of text addressed the friendly, supportive nature of the school.
 
 The school also wanted potential new students to easily find information on classes, so I included a call-to-action button in the homepage banner. To ensure the user's attention is drawn here, the button is coloured a contrasting colour and I used leading lines within the hero image.
 
