@@ -6,3 +6,4 @@ enableRobotsTXT = "true"
 
 [blackfriday]
   hrefTargetBlank = true
+  noreferrerLinks = true
