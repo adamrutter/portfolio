@@ -1,4 +1,4 @@
-baseURL = "https://goofy-ptolemy-49e824.netlify.com/"
+baseURL = "https://adamrutter.com/"
 languageCode = "en-gb"
 title = "Adam Rutter"
 disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
