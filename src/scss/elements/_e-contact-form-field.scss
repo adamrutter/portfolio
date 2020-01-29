@@ -38,11 +38,11 @@
     }
 
     label {
+      @include l-accessible-hidden();
+
       left: line-height(default) * 1.75;
       pointer-events: none;
-      position: absolute;
       top: line-height(default);
-      visibility: hidden;
     }
   }
 }
